@@ -1,0 +1,15 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	dce_rpc
+#open	2025-06-10-11-19-32
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	rtt	named_pipe	endpoint	operation
+#types	time	string	addr	port	addr	port	interval	string	string	string
+1352718188.342280	CfeP9WvT3isaZHEb7	141.81.0.187	3354	141.81.0.10	135	0.000733	135	IObjectExporter	SimplePing
+1352718209.848946	C8LAHK2yTc1T9g2TO8	141.81.0.182	3139	141.81.0.10	135	0.000713	135	IObjectExporter	SimplePing
+1352718217.075162	CLms7V2aORSU2jWzB9	141.81.0.10	59792	141.81.0.11	135	0.002066	135	IObjectExporter	SimplePing
+1352718219.417683	C4BJcK3udyjQnZgX63	141.81.0.10	59793	141.81.0.183	135	0.001081	135	IObjectExporter	SimplePing
+1352718219.423373	CNrXTz17pqf3OQM7gc	141.81.0.10	59794	141.81.0.181	135	0.001081	135	IObjectExporter	SimplePing
+1352718240.736794	C9LWGi088OS4C4EMi	141.81.0.183	1461	141.81.0.10	135	0.000545	135	IObjectExporter	SimplePing
+#close	2025-06-10-11-19-33
