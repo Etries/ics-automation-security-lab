@@ -1,98 +1,148 @@
-policy_name: "PLC1_Traffic_Policy"
-description: "Full Modbus policy for PLC1 (10.10.10.11) with time constraints, TID monitoring, exception detection, and NIS2 alignment"
+rules:
+  - id: R001
+    description: Unauthorized write to start_cmd register
+    role: start_cmd
+    function_code: 6
+    allowed_src_ips: ["10.10.10.10"]
+    severity: high
+    mitre: { tactic: TA0006, technique: T0831 }
+    real_world: "Triton (2017)"
+    nis2_article: "Article 23"
 
-modbus_device:
-  name: "PLC1_Modbus_Server"
-  ip: "10.10.10.11"
-  unit_id: 1
-  mac_address: "08:00:27:11:22:33"
-  geo_location: "Ireland"
+  - id: R002
+    description: Forged tank level > 100% with alarm suppressed
+    role: tank_level
+    max_value: 100
+    correlated_role: alarm_flag
+    correlated_value: 0
+    severity: high
+    mitre: { tactic: TA0007, technique: T0812 }
+    real_world: "Maroochy attack"
+    nis2_article: "Article 21.b"
 
-allowed_client_operations:
-  "10.10.10.10":  # HMI client
-    - func: "READ_COILS"
-      func_code: 1
-      addresses: [0]
-      severity: "low"
-      active_window:
-        start: "07:00"
-        end: "20:00"
-    - func: "WRITE_SINGLE_REGISTER"
-      func_code: 6
-      addresses: [0]
-      severity: "high"
-      active_window:
-        start: "08:00"
-        end: "18:00"
-    - func: "READ_HOLDING_REGISTERS"
-      func_code: 3
-      addresses: [0, 1, 2]
-      severity: "medium"
-      active_window:
-        start: "07:00"
-        end: "20:00"
+  - id: R003
+    description: Replay attack (duplicate TID/value within 2s)
+    replay_detection: true
+    time_window_seconds: 2
+    severity: high
+    mitre: { tactic: TA0008, technique: T0815 }
+    real_world: "Stuxnet"
+    nis2_article: "Article 23"
 
-rate_limits:
-  max_requests_per_minute: 50
-  max_write_commands_per_minute: 10
-  severity: "medium"
-  NIS2_article: 23
+  - id: R004
+    description: VLAN tag mismatch (not VLAN 10)
+    vlan_required: 10
+    severity: medium
+    mitre: { tactic: TA0007, technique: T0812 }
+    real_world: "Network misconfig"
+    nis2_article: "Article 21"
 
-value_constraints:
-  holding_registers:
-    0: { min: 0, max: 9, severity: "high", NIS2_article: 21 }
-    1: { min: 0, max: 5, severity: "medium", NIS2_article: 21 }
-    2: { min: 1, max: 3, severity: "medium", NIS2_article: 21 }
+  - id: R005
+    description: Alarm suppression when tank_level > 90
+    role: alarm_flag
+    value: 0
+    correlated_role: tank_level
+    correlated_operator: ">"
+    correlated_value: 90
+    severity: high
+    mitre: { tactic: TA0007, technique: T0812 }
+    real_world: "Triton"
+    nis2_article: "Article 21.b"
 
-conditional_rules:
-  - when:
-      register: 1
-      value: 3
-    prohibit:
-      func_codes: [6]  # WRITE_SINGLE_REGISTER
-    severity: "critical"
-    NIS2_article: 21
-    notes: "Prevent filling tank when already full (reg1=3)"
+  - id: R006
+    description: Illegal Modbus function code
+    disallowed_function_codes: [8, 43]
+    severity: high
+    mitre: { tactic: TA0007, technique: T0812 }
+    real_world: "Protocol abuse"
+    nis2_article: "Article 23"
 
-alerts:
-  detect_exception_responses:
-    enabled: true
-    severity: "medium"
-    NIS2_article: 26
+  - id: R007
+    description: Flood/scan detection (>20 requests in 5s)
+    flood_threshold: 20
+    flood_window_seconds: 5
+    severity: medium
+    mitre: { tactic: TA0007, technique: T0812 }
+    real_world: "Network scan"
+    nis2_article: "Article 23"
 
-  detect_broadcast_scans:
-    enabled: true
-    severity: "high"
-    NIS2_article: 23
+  - id: R008
+    description: Process state mismatch (mixing when tank not full)
+    role: process_state
+    expected_value: 2
+    correlated_role: tank_level
+    correlated_operator: "<"
+    correlated_value: 80
+    severity: high
+    mitre: { tactic: TA0007, technique: T0812 }
+    real_world: "Logic abuse"
+    nis2_article: "Article 21"
 
-  detect_invalid_function_codes:
-    enabled: true
-    severity: "high"
-    NIS2_article: 26
+  - id: R009
+    description: Unauthorized coil write
+    role: mixing_done
+    function_code: 5
+    allowed_src_ips: ["10.10.10.10"]
+    severity: high
+    mitre: { tactic: TA0006, technique: T0831 }
+    real_world: "Triton (2017)"
+    nis2_article: "Article 23"
 
-  detect_empty_payloads:
-    enabled: true
-    severity: "medium"
-    NIS2_article: 21
+  - id: R010
+    description: Sudden tank level jump (>50 in 1s)
+    role: tank_level
+    max_jump_per_second: 50
+    severity: medium
+    mitre: { tactic: TA0007, technique: T0812 }
+    real_world: "Sensor spoofing"
+    nis2_article: "Article 21"
 
-  alert_on_unexpected_clients:
-    enabled: true
-    severity: "high"
-    NIS2_article: 21
+  - id: R011
+    description: Multi-stage attack (start_cmd, replay, alarm suppression)
+    multi_stage_rules: [R001, R003, R005]
+    severity: critical
+    mitre: { tactic: TA0008, technique: T0815 }
+    real_world: "Stuxnet"
+    nis2_article: "Article 23"
 
-  alert_on_forbidden_function:
-    enabled: true
-    severity: "critical"
-    NIS2_article: 21
+  - id: R012
+    description: Device spoofing (unknown orig_h)
+    require_known_src_ips: true
+    severity: high
+    mitre: { tactic: TA0007, technique: T0812 }
+    real_world: "Impersonation"
+    nis2_article: "Article 23"
 
-  alert_on_prohibited_condition:
-    enabled: true
-    severity: "critical"
-    NIS2_article: 21
+  - id: R013
+    description: Excessive start_cmd (>5 in 1 min)
+    role: start_cmd
+    value: 500
+    max_occurrences: 5
+    time_window_seconds: 60
+    severity: medium
+    mitre: { tactic: TA0006, technique: T0831 }
+    real_world: "Command abuse"
+    nis2_article: "Article 23"
 
-  detect_tid_mismatch:
-    enabled: true
-    severity: "critical"
-    NIS2_article: 23
-    notes: "Detects potential MITM attacks by tracking request/response transaction IDs"
+  - id: R014
+    description: Start_cmd issued before mixing_done and drain
+    role: start_cmd
+    value: 500
+    precondition_roles:
+      - mixing_done
+      - drain
+    violation_if_precondition_missing: true
+    severity: high
+    mitre: { tactic: TA0006, technique: T0831 }
+    real_world: "Logic abuse"
+    nis2_article: "Article 21"
 
+  - id: R015
+    description: Read Device Identification from non-maintenance IP
+    function_code: 43
+    subfunction_code: 14
+    allowed_src_ips: ["10.10.10.10"]
+    severity: medium
+    mitre: { tactic: TA0007, technique: T0861 }
+    real_world: "Recon"
+    nis2_article: "Article 23" 
