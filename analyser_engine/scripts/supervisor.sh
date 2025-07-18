@@ -36,8 +36,7 @@ while true; do
     ALERT_FILE="$ALERTS_DIR/alerts_${TIMESTAMP}.json"
 
     echo "[INFO] Starting capture for $CAPTURE_DURATION seconds → $PCAP_FILE"
-    timeout "$CAPTURE_DURATION" tcpdump -i "$INTERFACE" -w "$PCAP_FILE" 'port 502' &
-    CAPTURE_PID=$!
+    timeout "$CAPTURE_DURATION" tcpdump -i "$INTERFACE" -e -U -w "$PCAP_FILE" vlan and port 502 &    CAPTURE_PID=$!
 
     sleep "$CAPTURE_DURATION"
     wait "$CAPTURE_PID"
