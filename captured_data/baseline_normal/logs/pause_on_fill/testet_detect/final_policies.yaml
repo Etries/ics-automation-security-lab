@@ -1,0 +1,94 @@
+rules:
+- id: R001
+  description: Unauthorized write to start_cmd register
+  role: start_cmd
+  function_code: 6
+  allowed_src_ips:
+  - 10.10.10.10
+  severity: high
+  mitre:
+    tactic: TA0006
+    technique: T0831
+  real_world: Triton (2017)
+  nis2_article: Article 23
+- id: R002
+  description: Forged tank level > 100% with alarm suppressed
+  role: tank_level
+  max_value: 100
+  correlated_role: alarm_flag
+  correlated_value: 0
+  severity: high
+  mitre:
+    tactic: TA0007
+    technique: T0812
+  real_world: Maroochy attack
+  nis2_article: Article 21.b
+- id: R003
+  description: Replay attack (same TID and value repeated within 2s more than twice)
+  role: null
+  function_code: 5
+  replay_detection: true
+  time_window_seconds: 2
+  count: 3
+  function_code: 5
+  role: mixing_done
+  severity: medium
+  mitre:
+    tactic: TA0008
+    technique: T0815
+  real_world: Stuxnet
+  nis2_article: Article 23
+- id: R004
+  description: VLAN tag mismatch (not VLAN 10)
+  vlan_required: 10
+  severity: medium
+  mitre:
+    tactic: TA0007
+    technique: T0812
+  real_world: Network misconfig
+  nis2_article: Article 21
+- id: R005
+  description: Alarm suppression when tank_level > 90
+  role: alarm_flag
+  value: 0
+  correlated_role: tank_level
+  correlated_operator: '>'
+  correlated_value: 90
+  severity: high
+  mitre:
+    tactic: TA0007
+    technique: T0812
+  real_world: Triton
+  nis2_article: Article 21.b
+- id: R006
+  description: Illegal Modbus function code
+  disallowed_function_codes:
+  - 8
+  - 43
+  severity: high
+  mitre:
+    tactic: TA0007
+    technique: T0812
+  real_world: Protocol abuse
+  nis2_article: Article 23
+- id: R010
+  description: Sudden tank level jump (>75 in 1s)
+  role: tank_level
+  max_jump_per_second: 75
+  severity: medium
+  mitre:
+    tactic: TA0007
+    technique: T0812
+  real_world: Sensor spoofing
+  nis2_article: Article 21
+- id: R012
+  description: Device spoofing (unknown orig_h)
+  require_known_src_ips: true
+  allowed_src_ips:
+  - 10.10.20.30
+  severity: high
+  mitre:
+    tactic: TA0007
+    technique: T0812
+  real_world: Impersonation
+  nis2_article: Article 23
