@@ -62,7 +62,7 @@ rules:
 
   - id: R007
     description: Flood/scan detection (>20 requests in 5s)
-    flood_threshold: 20
+    flood_threshold: 100
     flood_window_seconds: 5
     severity: medium
     mitre: { tactic: TA0007, technique: T0812 }

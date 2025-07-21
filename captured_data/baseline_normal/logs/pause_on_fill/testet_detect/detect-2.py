@@ -2,24 +2,16 @@
 import argparse
 import yaml
 import json
-import os
-from collections import defaultdict, deque
-from datetime import datetime, timedelta
+from collections import defaultdict
+from datetime import datetime
 
-# ─────────────────────────────
-# Argument Parsing
-# ─────────────────────────────
 parser = argparse.ArgumentParser()
 parser.add_argument('--log', required=True)
 parser.add_argument('--policy', required=True)
 parser.add_argument('--addrmap', required=True)
-parser.add_argument('--vlan', help='Optional VLAN tag to check against')
-parser.add_argument('--out', help='Output alert file')
+parser.add_argument('--vlan')
+parser.add_argument('--out')
 args = parser.parse_args()
-
-# ─────────────────────────────
-# Load YAML Configs
-# ─────────────────────────────
 with open(args.policy) as f:
     rules = yaml.safe_load(f)['rules']
 with open(args.addrmap) as f:
@@ -30,9 +22,6 @@ role_buffer = {}
 replay_tracker = defaultdict(list)
 freq_tracker = defaultdict(list)
 
-# ─────────────────────────────
-# Utility
-# ─────────────────────────────
 def parse_log_line(line):
     parts = line.strip().split('\t')
     if len(parts) < 18: return None
@@ -55,18 +44,14 @@ def val_int(val):
     except: return None
 
 def emit(rule, log, reason):
-    alert = {
+    alerts.append({
         "timestamp": log['ts'], "rule_id": rule['id'],
         "description": rule['description'], "source": log['src'], "destination": log['dst'],
         "address": log['addr'], "value": log['val'], "severity": rule['severity'],
         "mitre": rule.get('mitre', {}), "real_world": rule.get('real_world', ''),
         "nis2_article": rule.get('nis2_article', ''), "reason": reason
-    }
-    alerts.append(alert)
+    })
 
-# ─────────────────────────────
-# Process Log
-# ─────────────────────────────
 with open(args.log) as f:
     for line in f:
         if line.startswith('#') or not line.strip(): continue
@@ -78,11 +63,6 @@ with open(args.log) as f:
         now = ts_float(log['ts'])
 
         for rule in rules:
-            # --- Base Matching ---
-            if rule.get('role') and rule['role'] != log['role']: continue
-            if rule.get('function_code') and rule['function_code'] != log['func']: continue
-
-            # --- Source IP Checks ---
             if 'allowed_src_ips' in rule and log['src'] not in rule['allowed_src_ips']:
                 emit(rule, log, f"unauthorized IP {log['src']}")
                 continue
@@ -90,18 +70,21 @@ with open(args.log) as f:
             if rule.get('require_known_src_ips') and 'allowed_src_ips' in rule:
                 if log['src'] not in rule['allowed_src_ips']:
                     emit(rule, log, f"unknown source {log['src']}")
+                    continue
 
-            # --- VLAN Check from --vlan arg ---
+            if rule.get('function_code') and rule['function_code'] != log['func']:
+                continue
+            if rule.get('role') and rule['role'] != log['role']:
+                continue
+
             if 'vlan_required' in rule and args.vlan:
                 if str(rule['vlan_required']) != args.vlan:
                     emit(rule, log, f"VLAN mismatch (expected {rule['vlan_required']}, got {args.vlan})")
 
-            # --- Function Abuse ---
             if 'disallowed_function_codes' in rule:
                 if log['func'] in rule['disallowed_function_codes']:
                     emit(rule, log, f"Illegal function {log['func']}")
 
-            # --- Exact Value Match + Frequency ---
             if 'value' in rule and log['val_int'] == rule['value']:
                 if 'max_occurrences' in rule and 'time_window_seconds' in rule:
                     key = (rule['id'], log['src'])
@@ -112,19 +95,17 @@ with open(args.log) as f:
                 else:
                     emit(rule, log, "Matched value")
 
-            # --- Max Value ---
             if 'max_value' in rule and log['val_int'] and log['val_int'] > rule['max_value']:
                 emit(rule, log, f"Value {log['val_int']} exceeds {rule['max_value']}")
 
-            # --- Replay Detection ---
             if rule.get('replay_detection'):
                 tid_key = (log['tid'], log['val'])
+                replay_tracker[tid_key] = [t for t in replay_tracker[tid_key] if now - t < rule['time_window_seconds']]
                 replay_tracker[tid_key].append(now)
-                if len(replay_tracker[tid_key]) >= 2:
-                    if abs(replay_tracker[tid_key][-1] - replay_tracker[tid_key][-2]) < rule['time_window_seconds']:
-                        emit(rule, log, "Replay Detected")
+                count_threshold = rule.get('count', 2)
+                if len(replay_tracker[tid_key]) >= count_threshold:
+                    emit(rule, log, f"Replay detected for TID={log['tid']}")
 
-            # --- Jump Detection ---
             if 'max_jump_per_second' in rule:
                 r = rule['role']
                 if r in role_buffer:
@@ -134,9 +115,13 @@ with open(args.log) as f:
                         emit(rule, log, f"Jump rate {jump:.2f} exceeds {rule['max_jump_per_second']}")
                 role_buffer[r] = (now, log['val_int'])
 
-# ─────────────────────────────
-# Output Alerts
-# ─────────────────────────────
+            if 'flood_threshold' in rule and 'flood_window_seconds' in rule:
+                key = (log['src'], rule['id'])
+                freq_tracker[key] = [t for t in freq_tracker[key] if now - t < rule['flood_window_seconds']]
+                freq_tracker[key].append(now)
+                if len(freq_tracker[key]) > rule['flood_threshold']:
+                    emit(rule, log, "flood/scan")
+
 if args.out:
     with open(args.out, 'w') as f:
         json.dump(alerts, f, indent=2)
