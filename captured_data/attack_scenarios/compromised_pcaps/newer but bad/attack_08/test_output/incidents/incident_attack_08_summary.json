@@ -1,0 +1,192 @@
+{
+  "summary": {
+    "total_incidents": 1,
+    "critical_incidents": 1,
+    "high_incidents": 0,
+    "severity_distribution": {
+      "critical": 1
+    },
+    "rule_distribution": {
+      "R012": 1,
+      "R014": 1
+    }
+  },
+  "critical_incidents": [
+    {
+      "incident_id": "INC-20250817-5800d0a5e020a20d",
+      "start_time": "2025-08-16T15:49:49.137868+00:00",
+      "end_time": "2025-08-16T15:51:20.473581+00:00",
+      "duration_seconds": 91.335713,
+      "severity": "critical",
+      "alert_count": 16,
+      "summary": "16 correlated alerts; rules: R012, R014.",
+      "affected_assets": [
+        "PLC1 \u2013 OpenPLC Runtime"
+      ],
+      "source_assets": [
+        "unknown_asset"
+      ],
+      "triggered_rules": [
+        "R012",
+        "R014"
+      ],
+      "source_ip": "10.10.10.100",
+      "destination_ip": "10.10.10.10",
+      "function_code": 4,
+      "register_address": 100,
+      "register_value": "",
+      "transaction_id": "",
+      "mitre_attack": {
+        "tactic_id": "TA0007",
+        "tactic_name": "Discovery/Collection",
+        "tactic_description": "Information gathering or protocol abuse",
+        "technique_id": "T0812",
+        "technique_name": "Unknown",
+        "technique_description": ""
+      },
+      "nis2_compliance": {
+        "article_id": "Article 21",
+        "article_name": "Risk Management",
+        "description": "Risk assessment and measures",
+        "requirements": [
+          "Risk assessment",
+          "Security measures",
+          "Incident detection"
+        ]
+      },
+      "timeline": [
+        {
+          "timestamp": "2025-08-16T15:49:49.137868+00:00",
+          "rule_id": "R012",
+          "description": "VLAN violation - device on wrong VLAN",
+          "source": "unknown_asset (10.10.10.100)",
+          "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+          "details": "Register: tank_level (100), Value: N/A"
+        },
+        {
+          "timestamp": "2025-08-16T15:49:49.137868+00:00",
+          "rule_id": "R014",
+          "description": "Device spoofing attempt from unauthorized IP",
+          "source": "unknown_asset (10.10.10.100)",
+          "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+          "details": "Register: tank_level (100), Value: 0"
+        },
+        {
+          "timestamp": "2025-08-16T15:49:49.192735+00:00",
+          "rule_id": "R012",
+          "description": "VLAN violation - device on wrong VLAN",
+          "source": "unknown_asset (10.10.10.100)",
+          "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+          "details": "Register: unknown_register (-1), Value: N/A"
+        },
+        {
+          "timestamp": "2025-08-16T15:49:49.192735+00:00",
+          "rule_id": "R014",
+          "description": "Device spoofing attempt from unauthorized IP",
+          "source": "unknown_asset (10.10.10.100)",
+          "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+          "details": "Register: unknown_register (-1), Value: 55"
+        },
+        {
+          "timestamp": "2025-08-16T15:50:38.731928+00:00",
+          "rule_id": "R012",
+          "description": "VLAN violation - device on wrong VLAN",
+          "source": "unknown_asset (10.10.10.100)",
+          "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+          "details": "Register: tank_level (100), Value: N/A"
+        },
+        {
+          "timestamp": "2025-08-16T15:50:38.731928+00:00",
+          "rule_id": "R014",
+          "description": "Device spoofing attempt from unauthorized IP",
+          "source": "unknown_asset (10.10.10.100)",
+          "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+          "details": "Register: tank_level (100), Value: 0"
+        },
+        {
+          "timestamp": "2025-08-16T15:50:38.817796+00:00",
+          "rule_id": "R012",
+          "description": "VLAN violation - device on wrong VLAN",
+          "source": "unknown_asset (10.10.10.100)",
+          "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+          "details": "Register: unknown_register (-1), Value: N/A"
+        },
+        {
+          "timestamp": "2025-08-16T15:50:38.817796+00:00",
+          "rule_id": "R014",
+          "description": "Device spoofing attempt from unauthorized IP",
+          "source": "unknown_asset (10.10.10.100)",
+          "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+          "details": "Register: unknown_register (-1), Value: 52"
+        },
+        {
+          "timestamp": "2025-08-16T15:51:17.392715+00:00",
+          "rule_id": "R012",
+          "description": "VLAN violation - device on wrong VLAN",
+          "source": "unknown_asset (10.10.10.100)",
+          "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+          "details": "Register: tank_level (100), Value: N/A"
+        },
+        {
+          "timestamp": "2025-08-16T15:51:17.392715+00:00",
+          "rule_id": "R014",
+          "description": "Device spoofing attempt from unauthorized IP",
+          "source": "unknown_asset (10.10.10.100)",
+          "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+          "details": "Register: tank_level (100), Value: 0"
+        },
+        {
+          "timestamp": "2025-08-16T15:51:17.435820+00:00",
+          "rule_id": "R012",
+          "description": "VLAN violation - device on wrong VLAN",
+          "source": "unknown_asset (10.10.10.100)",
+          "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+          "details": "Register: unknown_register (-1), Value: N/A"
+        },
+        {
+          "timestamp": "2025-08-16T15:51:17.435820+00:00",
+          "rule_id": "R014",
+          "description": "Device spoofing attempt from unauthorized IP",
+          "source": "unknown_asset (10.10.10.100)",
+          "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+          "details": "Register: unknown_register (-1), Value: 40"
+        },
+        {
+          "timestamp": "2025-08-16T15:51:20.425588+00:00",
+          "rule_id": "R012",
+          "description": "VLAN violation - device on wrong VLAN",
+          "source": "unknown_asset (10.10.10.100)",
+          "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+          "details": "Register: tank_level (100), Value: N/A"
+        },
+        {
+          "timestamp": "2025-08-16T15:51:20.425588+00:00",
+          "rule_id": "R014",
+          "description": "Device spoofing attempt from unauthorized IP",
+          "source": "unknown_asset (10.10.10.100)",
+          "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+          "details": "Register: tank_level (100), Value: 0"
+        },
+        {
+          "timestamp": "2025-08-16T15:51:20.473581+00:00",
+          "rule_id": "R012",
+          "description": "VLAN violation - device on wrong VLAN",
+          "source": "unknown_asset (10.10.10.100)",
+          "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+          "details": "Register: unknown_register (-1), Value: N/A"
+        },
+        {
+          "timestamp": "2025-08-16T15:51:20.473581+00:00",
+          "rule_id": "R014",
+          "description": "Device spoofing attempt from unauthorized IP",
+          "source": "unknown_asset (10.10.10.100)",
+          "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+          "details": "Register: unknown_register (-1), Value: 55"
+        }
+      ],
+      "detection_method": "passive_network_analysis",
+      "status": "open"
+    }
+  ],
+  "high_incidents": []
+}

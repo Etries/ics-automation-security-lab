@@ -1,0 +1,29 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	dhcp
+#open	2025-07-15-12-09-37
+#fields	ts	uids	client_addr	server_addr	mac	host_name	client_fqdn	domain	requested_addr	assigned_addr	lease_time	client_message	server_message	msg_types	duration
+#types	time	set[string]	addr	addr	string	string	string	string	addr	addr	interval	string	string	vector[string]	interval
+1752502339.183059	CJSEsp2uYefuMIvNuc	-	-	08:00:27:11:68:b4	OpenPLC	-	-	-	-	-	-	-	DISCOVER	0.000000
+1752502341.306312	CJSEsp2uYefuMIvNuc	-	-	08:00:27:11:68:b4	OpenPLC	-	-	-	-	-	-	-	DISCOVER	0.000000
+1752502346.027390	CJSEsp2uYefuMIvNuc	-	-	08:00:27:11:68:b4	OpenPLC	-	-	-	-	-	-	-	DISCOVER	0.000000
+1752502354.563110	CJSEsp2uYefuMIvNuc	-	-	08:00:27:11:68:b4	OpenPLC	-	-	-	-	-	-	-	DISCOVER	0.000000
+1752502370.750361	CJSEsp2uYefuMIvNuc	-	-	08:00:27:11:68:b4	OpenPLC	-	-	-	-	-	-	-	DISCOVER	0.000000
+1752502386.318363	CJSEsp2uYefuMIvNuc	-	-	08:00:27:11:68:b4	OpenPLC	-	-	-	-	-	-	-	DISCOVER	0.000000
+1752502390.488164	CJSEsp2uYefuMIvNuc	-	-	08:00:27:11:68:b4	OpenPLC	-	-	-	-	-	-	-	DISCOVER	0.000000
+1752502384.193255	CJSEsp2uYefuMIvNuc	-	-	08:00:27:11:68:b4	OpenPLC	-	-	-	-	-	-	-	DISCOVER	0.000000
+1752502398.502219	CJSEsp2uYefuMIvNuc	-	-	08:00:27:11:68:b4	OpenPLC	-	-	-	-	-	-	-	DISCOVER	0.000000
+1752502414.962547	CJSEsp2uYefuMIvNuc	-	-	08:00:27:11:68:b4	OpenPLC	-	-	-	-	-	-	-	DISCOVER	0.000000
+1752502431.751689	CJSEsp2uYefuMIvNuc	-	-	08:00:27:11:68:b4	OpenPLC	-	-	-	-	-	-	-	DISCOVER	0.000000
+1752502429.187383	CJSEsp2uYefuMIvNuc	-	-	08:00:27:11:68:b4	OpenPLC	-	-	-	-	-	-	-	DISCOVER	0.000000
+1752502436.239527	CJSEsp2uYefuMIvNuc	-	-	08:00:27:11:68:b4	OpenPLC	-	-	-	-	-	-	-	DISCOVER	0.000000
+1752502445.048125	CJSEsp2uYefuMIvNuc	-	-	08:00:27:11:68:b4	OpenPLC	-	-	-	-	-	-	-	DISCOVER	0.000000
+1752502461.738102	CJSEsp2uYefuMIvNuc	-	-	08:00:27:11:68:b4	OpenPLC	-	-	-	-	-	-	-	DISCOVER	0.000000
+1752502474.183087	CJSEsp2uYefuMIvNuc	-	-	08:00:27:11:68:b4	OpenPLC	-	-	-	-	-	-	-	DISCOVER	0.000000
+1752502480.721335	CJSEsp2uYefuMIvNuc	-	-	08:00:27:11:68:b4	OpenPLC	-	-	-	-	-	-	-	DISCOVER	0.000000
+1752502476.337159	CJSEsp2uYefuMIvNuc	-	-	08:00:27:11:68:b4	OpenPLC	-	-	-	-	-	-	-	DISCOVER	0.000000
+1752502489.502382	CJSEsp2uYefuMIvNuc	-	-	08:00:27:11:68:b4	OpenPLC	-	-	-	-	-	-	-	DISCOVER	0.000000
+1752502506.029675	CJSEsp2uYefuMIvNuc	-	-	08:00:27:11:68:b4	OpenPLC	-	-	-	-	-	-	-	DISCOVER	0.000000
+#close	2025-07-15-12-09-37

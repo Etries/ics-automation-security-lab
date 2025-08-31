@@ -1,0 +1,14 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	conn
+#open	2025-08-17-14-03-07
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	service	duration	orig_bytes	resp_bytes	conn_state	local_orig	local_resp	missed_bytes	history	orig_pkts	orig_ip_bytes	resp_pkts	resp_ip_bytes	tunnel_parents	ip_proto
+#types	time	string	addr	port	addr	port	enum	string	interval	count	count	string	bool	bool	count	string	count	count	count	count	set[string]	count
+1755261506.109319	CFCbwkTk7bUdkTkNl	10.10.10.100	53981	10.10.10.10	502	tcp	modbus	0.071964	12	12	SF	T	T	0	ShADadFf	6	332	4	228	-	6
+1755261508.181830	CTewsp2QnIBUmBs2vk	10.10.10.100	43981	10.10.10.10	502	tcp	modbus	0.015642	12	12	SF	T	T	0	ShADadFf	6	332	4	228	-	6
+1755261526.592796	CgkgtB3ULsrxfYLRIg	10.10.10.100	52391	10.10.10.10	502	tcp	modbus	0.030821	12	12	SF	T	T	0	ShADadFf	6	332	4	228	-	6
+1755261528.622632	C7iScB10ekziMWyfD	10.10.10.100	44017	10.10.10.10	502	tcp	modbus	0.017556	12	12	SF	T	T	0	ShADadFf	6	332	4	228	-	6
+1755261413.956576	CeKExR1Qcfm6wDfB97	10.10.20.30	57876	10.10.10.10	502	tcp	modbus	334.184921	23328	20742	OTH	T	T	0	DTdtATtTtTt	7768	357376	3888	197004	-	6
+#close	2025-08-17-14-03-08

@@ -1,0 +1,56 @@
+[
+  {
+    "incident_id": "INC-20250818-264584d430dab3f8",
+    "start_time": "2025-08-15T13:08:36.935763+00:00",
+    "end_time": "2025-08-15T13:08:36.935763+00:00",
+    "duration_seconds": 0.0,
+    "severity": "medium",
+    "alert_count": 1,
+    "summary": "1 correlated alerts; rules: R013.",
+    "affected_assets": [
+      "PLC1 \u2013 OpenPLC Runtime"
+    ],
+    "source_assets": [
+      "unknown_asset"
+    ],
+    "triggered_rules": [
+      "R013"
+    ],
+    "source_ip": "10.10.10.100",
+    "destination_ip": "10.10.10.10",
+    "function_code": 4,
+    "register_address": 100,
+    "register_value": 0,
+    "transaction_id": 4995,
+    "mitre_attack": {
+      "tactic_id": "TA0007",
+      "tactic_name": "Discovery/Collection",
+      "tactic_description": "Information gathering or protocol abuse",
+      "technique_id": "T0812",
+      "technique_name": "Unknown",
+      "technique_description": ""
+    },
+    "nis2_compliance": {
+      "article_id": "Article 23",
+      "article_name": "Incident Reporting",
+      "description": "Detection and reporting",
+      "requirements": [
+        "Incident detection",
+        "Reporting",
+        "Response coordination"
+      ]
+    },
+    "timeline": [
+      {
+        "timestamp": "2025-08-15T13:08:36.935763+00:00",
+        "rule_id": "R013",
+        "description": "Non-sequential or suspicious TID pattern",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      }
+    ],
+    "detection_method": "passive_network_analysis",
+    "status": "open"
+  }
+]

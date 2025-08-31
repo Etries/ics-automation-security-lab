@@ -1,0 +1,132 @@
+{
+  "summary": {
+    "total_incidents": 12,
+    "critical_incidents": 0,
+    "high_incidents": 2,
+    "severity_distribution": {
+      "medium": 10,
+      "high": 2
+    },
+    "rule_distribution": {
+      "R016": 10,
+      "R005": 4,
+      "R015": 2
+    }
+  },
+  "critical_incidents": [],
+  "high_incidents": [
+    {
+      "incident_id": "INC-20250817-2fa4429b1fd1265b",
+      "start_time": "2025-08-17T10:56:09.450964+00:00",
+      "end_time": "2025-08-17T10:56:09.450964+00:00",
+      "duration_seconds": 0.0,
+      "severity": "high",
+      "alert_count": 1,
+      "summary": "1 correlated alerts; rules: R015.",
+      "affected_assets": [
+        "PLC1 \u2013 OpenPLC Runtime"
+      ],
+      "source_assets": [
+        "HMI \u2013 AdvancedHMI (Windows)"
+      ],
+      "triggered_rules": [
+        "R015"
+      ],
+      "source_ip": "10.10.20.30",
+      "destination_ip": "10.10.10.10",
+      "function_code": 6,
+      "register_address": 1024,
+      "register_value": 500,
+      "transaction_id": 335,
+      "mitre_attack": {
+        "tactic_id": "TA0007",
+        "tactic_name": "Discovery/Collection",
+        "tactic_description": "Information gathering or protocol abuse",
+        "technique_id": "T0812",
+        "technique_name": "Unknown",
+        "technique_description": ""
+      },
+      "nis2_compliance": {
+        "article_id": "Article 23",
+        "article_name": "Incident Reporting",
+        "description": "Detection and reporting",
+        "requirements": [
+          "Incident detection",
+          "Reporting",
+          "Response coordination"
+        ]
+      },
+      "timeline": [
+        {
+          "timestamp": "2025-08-17T10:56:09.450964+00:00",
+          "rule_id": "R015",
+          "description": "State transition timing violation - invalid timing between states",
+          "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+          "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+          "details": "Register: start_cmd (1024), Value: 500"
+        }
+      ],
+      "detection_method": "passive_network_analysis",
+      "status": "open"
+    },
+    {
+      "incident_id": "INC-20250817-625b51cf0728ffbe",
+      "start_time": "2025-08-17T10:56:09.452724+00:00",
+      "end_time": "2025-08-17T10:56:09.452724+00:00",
+      "duration_seconds": 0.0,
+      "severity": "high",
+      "alert_count": 2,
+      "summary": "2 correlated alerts; rules: R005, R015.",
+      "affected_assets": [
+        "PLC1 \u2013 OpenPLC Runtime"
+      ],
+      "source_assets": [
+        "unknown_asset"
+      ],
+      "triggered_rules": [
+        "R005",
+        "R015"
+      ],
+      "source_ip": "10.10.20.100",
+      "destination_ip": "10.10.10.10",
+      "function_code": 6,
+      "register_address": 1024,
+      "register_value": 500,
+      "transaction_id": 335,
+      "mitre_attack": {
+        "tactic_id": "",
+        "tactic_name": "Unknown",
+        "tactic_description": "",
+        "technique_id": "",
+        "technique_name": "Unknown",
+        "technique_description": ""
+      },
+      "nis2_compliance": {
+        "article_id": null,
+        "article_name": "Unknown",
+        "description": "",
+        "requirements": []
+      },
+      "timeline": [
+        {
+          "timestamp": "2025-08-17T10:56:09.452724+00:00",
+          "rule_id": "R005",
+          "description": "Role violation: Unauthorized IP 10.10.20.100 wrote register 1024",
+          "source": "unknown_asset (10.10.20.100)",
+          "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+          "details": "Register: start_cmd (1024), Value: 500"
+        },
+        {
+          "timestamp": "2025-08-17T10:56:09.452724+00:00",
+          "rule_id": "R015",
+          "description": "State transition timing violation - invalid timing between states",
+          "source": "unknown_asset (10.10.20.100)",
+          "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+          "details": "Register: start_cmd (1024), Value: 500"
+        }
+      ],
+      "detection_method": "passive_network_analysis",
+      "status": "open"
+    }
+  ]
+}

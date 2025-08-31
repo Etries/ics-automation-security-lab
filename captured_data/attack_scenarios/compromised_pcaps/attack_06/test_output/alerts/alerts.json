@@ -1,0 +1,41 @@
+[
+  {
+    "rule_id": "R006",
+    "description": "Illegal function code used: 16",
+    "severity": "high",
+    "src": "10.10.10.100",
+    "dst": "10.10.10.10",
+    "function_code": 16,
+    "address": 1024,
+    "timestamp": 1755263989.422072,
+    "uid": "C9KV4UZPBYAUDhnc5",
+    "value": 500,
+    "tid": 28309
+  },
+  {
+    "rule_id": "R006",
+    "description": "Illegal function code used: 16",
+    "severity": "high",
+    "src": "10.10.10.100",
+    "dst": "10.10.10.10",
+    "function_code": 16,
+    "address": 1024,
+    "timestamp": 1755263992.628634,
+    "uid": "CzC8an21deFR5fC6t9",
+    "value": 500,
+    "tid": 11298
+  },
+  {
+    "rule_id": "R006",
+    "description": "Illegal function code used: 16",
+    "severity": "high",
+    "src": "10.10.10.100",
+    "dst": "10.10.10.10",
+    "function_code": 16,
+    "address": 1024,
+    "timestamp": 1755263994.349171,
+    "uid": "CyMoBK38Loz5fOsysl",
+    "value": 500,
+    "tid": 25691
+  }
+]

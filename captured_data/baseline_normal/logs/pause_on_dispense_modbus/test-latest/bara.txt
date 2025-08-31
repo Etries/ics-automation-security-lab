@@ -1,0 +1,13 @@
+============================================================
+Fixed Universal ICS Detection Engine
+============================================================
+[*] Loading and analyzing ../test_output/zeek_logs/modbus_detailed.log...
+[*] Detected fields: ['ts', 'uid', 'id.orig_h', 'id.orig_p', 'id.resp_h', 'id.resp_p', 'is_orig', 'source_h', 'source_p', 'destination_h', 'destination_p', 'tid', 'unit', 'func', 'request_response', 'address', 'quantity', 'values']
+[*] Found 2161 valid Modbus events
+[*] Loaded 2 VLAN mappings
+
+[+] Analysis complete!
+[+] Found 0 alerts
+[+] Report saved to ../test_output/alerts/alerts.json
+
+[+] SUCCESS: Zero alerts detected (no false positives)

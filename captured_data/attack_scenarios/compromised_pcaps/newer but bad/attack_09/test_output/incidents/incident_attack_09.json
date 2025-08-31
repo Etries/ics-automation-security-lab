@@ -1,0 +1,60 @@
+[
+  {
+    "incident_id": "INC-20250817-e40c60018b1f6cd6",
+    "start_time": "2025-08-16T15:36:07.685178+00:00",
+    "end_time": "2025-08-16T15:37:42.140030+00:00",
+    "duration_seconds": 94.454852,
+    "severity": "medium",
+    "alert_count": 2,
+    "summary": "2 correlated alerts; rules: R005.",
+    "affected_assets": [
+      "PLC1 \u2013 OpenPLC Runtime"
+    ],
+    "source_assets": [
+      "unknown_asset"
+    ],
+    "triggered_rules": [
+      "R005"
+    ],
+    "source_ip": "10.10.20.100",
+    "destination_ip": "10.10.10.10",
+    "function_code": 6,
+    "register_address": 1024,
+    "register_value": 500,
+    "transaction_id": 28788,
+    "mitre_attack": {
+      "tactic_id": "",
+      "tactic_name": "Unknown",
+      "tactic_description": "",
+      "technique_id": "",
+      "technique_name": "Unknown",
+      "technique_description": ""
+    },
+    "nis2_compliance": {
+      "article_id": null,
+      "article_name": "Unknown",
+      "description": "",
+      "requirements": []
+    },
+    "timeline": [
+      {
+        "timestamp": "2025-08-16T15:36:07.685178+00:00",
+        "rule_id": "R005",
+        "description": "Role violation: Unauthorized IP 10.10.20.100 wrote register 1024",
+        "source": "unknown_asset (10.10.20.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: start_cmd (1024), Value: 500"
+      },
+      {
+        "timestamp": "2025-08-16T15:37:42.140030+00:00",
+        "rule_id": "R005",
+        "description": "Role violation: Unauthorized IP 10.10.20.100 wrote register 1024",
+        "source": "unknown_asset (10.10.20.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: start_cmd (1024), Value: 500"
+      }
+    ],
+    "detection_method": "passive_network_analysis",
+    "status": "open"
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "rule_id": "R015",
+    "description": "Undefined state transition: 500 -> 400",
+    "severity": "high",
+    "src": "10.10.20.30",
+    "dst": "10.10.10.10",
+    "function_code": 6,
+    "address": 1024,
+    "timestamp": 1755261515.940038,
+    "uid": "CkXPDX18neUDiCDK02",
+    "value": 400,
+    "tid": 445
+  },
+  {
+    "rule_id": "R015",
+    "description": "Undefined state transition: 400 -> 400",
+    "severity": "high",
+    "src": "10.10.20.30",
+    "dst": "10.10.10.10",
+    "function_code": 6,
+    "address": 1024,
+    "timestamp": 1755261607.203447,
+    "uid": "CkXPDX18neUDiCDK02",
+    "value": 400,
+    "tid": 463
+  },
+  {
+    "rule_id": "R015",
+    "description": "State transition context/timing violation: 400 -> 500 in 48.67s",
+    "severity": "high",
+    "src": "10.10.20.30",
+    "dst": "10.10.10.10",
+    "function_code": 6,
+    "address": 1024,
+    "timestamp": 1755261655.868739,
+    "uid": "CkXPDX18neUDiCDK02",
+    "value": 500,
+    "tid": 490
+  }
+]

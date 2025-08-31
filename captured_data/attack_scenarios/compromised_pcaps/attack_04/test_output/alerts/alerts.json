@@ -1,0 +1,15 @@
+[
+  {
+    "rule_id": "R013",
+    "description": "Non-sequential TID pattern from 10.10.10.100. Last: 5000, Now: 4995",
+    "severity": "medium",
+    "src": "10.10.10.100",
+    "dst": "10.10.10.10",
+    "function_code": 4,
+    "address": 100,
+    "timestamp": 1755263316.935763,
+    "uid": "C3v9lGIUvMJYkRKwc",
+    "value": 0,
+    "tid": 4995
+  }
+]

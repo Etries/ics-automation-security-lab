@@ -1,0 +1,4 @@
+  File "/home/kali/Desktop/Thesis_framework/ics-automation-security-lab/analyser_engine/tools/detect.py", line 543
+    if current_func in self.polling_optional_reads:if st['steps'] >= 1:
+                                                   ^^
+SyntaxError: invalid syntax

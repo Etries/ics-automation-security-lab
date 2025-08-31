@@ -1,0 +1,97 @@
+# ===================================================================
+# Modbus Register Address Map
+# Maps register addresses to semantic names for context-aware detection
+# ===================================================================
+
+# Control and Command Registers
+1024: start_cmd             # %MW0 - Control register for start commands
+1025: stop_cmd              # %MW1 - Control register for stop commands
+1026: emergency_stop        # %MW2 - Emergency stop command
+1027: reset_cmd            # %MW3 - System reset command
+
+# Process State Indicators
+800: process_state          # %QW100 - Current process state indicator
+801: system_status          # %QW101 - Overall system status
+802: error_code            # %QW102 - Error code register
+803: warning_code          # %QW103 - Warning code register
+
+# Physical Process Variables
+100: tank_level            # %IW100 - Tank level sensor (0-80)
+101: temperature           # %IW101 - Temperature sensor
+102: pressure             # %IW102 - Pressure sensor
+103: flow_rate            # %IW103 - Flow rate sensor
+104: ph_value             # %IW104 - pH value sensor
+
+# Control Outputs (Coils)
+0: inlet_valve            # %QX100.0 - Inlet valve control
+1: outlet_valve           # %QX100.1 - Outlet valve control
+2: mixer_ctrl             # %QX100.2 - Mixer control
+3: pump_ctrl              # %QX100.3 - Pump control
+4: mixing_done            # %QX100.4 - Mixing complete indicator
+5: system_ready           # %QX100.5 - System ready indicator
+6: alarm_active           # %QX100.6 - Alarm active indicator
+7: maintenance_mode       # %QX100.7 - Maintenance mode indicator
+
+# Status Indicators (Discrete Inputs)
+200: tank_full            # %IX100.0 - Tank full sensor
+201: tank_empty           # %IX100.1 - Tank empty sensor
+202: temperature_high     # %IX100.2 - High temperature sensor
+203: pressure_high        # %IX100.3 - High pressure sensor
+204: flow_sensor_ok       # %IX100.4 - Flow sensor status
+205: level_sensor_ok      # %IX100.5 - Level sensor status
+206: emergency_button     # %IX100.6 - Emergency button pressed
+207: door_open            # %IX100.7 - Safety door open
+
+# Alarm and Warning Registers
+300: alarm_register       # %QW200 - Alarm register
+301: warning_register     # %QW201 - Warning register
+302: diagnostic_code      # %QW202 - Diagnostic code
+303: maintenance_timer    # %QW203 - Maintenance timer
+
+# Configuration Registers
+400: target_level         # %QW300 - Target tank level
+401: target_temperature   # %QW301 - Target temperature
+402: target_pressure      # %QW302 - Target pressure
+403: target_flow_rate     # %QW303 - Target flow rate
+404: mixing_time          # %QW304 - Mixing duration
+405: cycle_time           # %QW305 - Process cycle time
+
+# Historical Data Registers
+500: last_tank_level      # %QW400 - Last recorded tank level
+501: last_temperature     # %QW401 - Last recorded temperature
+502: last_pressure        # %QW402 - Last recorded pressure
+503: last_flow_rate       # %QW403 - Last recorded flow rate
+504: process_start_time   # %QW404 - Process start timestamp
+505: process_end_time     # %QW405 - Process end timestamp
+
+# System Configuration
+600: system_id            # %QW500 - System identification
+601: firmware_version     # %QW501 - Firmware version
+602: hardware_revision    # %QW502 - Hardware revision
+603: serial_number        # %QW503 - Device serial number
+604: network_config       # %QW504 - Network configuration
+605: security_level       # %QW505 - Security level setting
+
+# Reserved for Future Use
+700: reserved_700         # %QW600 - Reserved register
+701: reserved_701         # %QW601 - Reserved register
+702: reserved_702         # %QW602 - Reserved register
+703: reserved_703         # %QW603 - Reserved register
+704: reserved_704         # %QW604 - Reserved register
+705: reserved_705         # %QW605 - Reserved register
+
+# Extended Registers (if supported)
+1000: extended_status     # %QW1000 - Extended status register
+1001: extended_config     # %QW1001 - Extended configuration
+1002: extended_alarm      # %QW1002 - Extended alarm register
+1003: extended_diagnostic # %QW1003 - Extended diagnostic
+1004: extended_control    # %QW1004 - Extended control register
+1005: extended_monitor    # %QW1005 - Extended monitoring
+
+# Special Function Registers
+2000: function_code_test  # %QW2000 - Function code testing register
+2001: protocol_test       # %QW2001 - Protocol testing register
+2002: communication_test  # %QW2002 - Communication testing
+2003: response_test       # %QW2003 - Response testing
+2004: timing_test         # %QW2004 - Timing testing
+2005: security_test       # %QW2005 - Security testing 

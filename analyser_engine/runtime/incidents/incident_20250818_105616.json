@@ -1,0 +1,384 @@
+[
+  {
+    "incident_id": "INC-20250818-e856086d191073b9",
+    "start_time": "2025-08-18T10:56:17.297453+00:00",
+    "end_time": "2025-08-18T10:56:45.590132+00:00",
+    "duration_seconds": 28.292679,
+    "severity": "medium",
+    "alert_count": 42,
+    "summary": "42 correlated alerts; rules: R016.",
+    "affected_assets": [
+      "PLC1 \u2013 OpenPLC Runtime"
+    ],
+    "source_assets": [
+      "HMI \u2013 AdvancedHMI (Windows)"
+    ],
+    "triggered_rules": [
+      "R016"
+    ],
+    "source_ip": "10.10.20.30",
+    "destination_ip": "10.10.10.10",
+    "function_code": 1,
+    "register_address": 800,
+    "register_value": 0,
+    "transaction_id": 294,
+    "mitre_attack": {
+      "tactic_id": "TA0007",
+      "tactic_name": "Discovery/Collection",
+      "tactic_description": "Information gathering or protocol abuse",
+      "technique_id": "T0812",
+      "technique_name": "Unknown",
+      "technique_description": ""
+    },
+    "nis2_compliance": {
+      "article_id": "Article 23",
+      "article_name": "Incident Reporting",
+      "description": "Detection and reporting",
+      "requirements": [
+        "Incident detection",
+        "Reporting",
+        "Response coordination"
+      ]
+    },
+    "timeline": [
+      {
+        "timestamp": "2025-08-18T10:56:17.297453+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: unknown_register (800), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:17.987756+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:18.672387+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: start_cmd (1024), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:19.362028+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: unknown_register (800), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:20.047024+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:20.734461+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: start_cmd (1024), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:21.414686+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: unknown_register (800), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:22.112961+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:22.816420+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: start_cmd (1024), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:23.501108+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: unknown_register (800), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:24.189286+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:24.874910+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: start_cmd (1024), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:25.564396+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: unknown_register (800), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:26.254000+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:26.941126+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: start_cmd (1024), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:27.627073+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: unknown_register (800), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:28.317024+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:29.005146+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: start_cmd (1024), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:29.690754+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: unknown_register (800), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:30.379301+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:31.083152+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: start_cmd (1024), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:31.790292+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: unknown_register (800), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:32.472788+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:33.161632+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: start_cmd (1024), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:33.848122+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: unknown_register (800), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:34.539047+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:35.227250+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: start_cmd (1024), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:35.917106+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: unknown_register (800), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:36.602205+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:37.292553+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: start_cmd (1024), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:37.977724+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: unknown_register (800), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:38.664830+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:39.367885+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: start_cmd (1024), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:40.057736+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: unknown_register (800), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:40.742154+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:41.431534+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: start_cmd (1024), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:42.138640+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: unknown_register (800), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:42.827179+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:43.511773+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: start_cmd (1024), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:44.199304+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: unknown_register (800), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:44.887855+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-18T10:56:45.590132+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: start_cmd (1024), Value: 0"
+      }
+    ],
+    "detection_method": "passive_network_analysis",
+    "status": "open"
+  }
+]

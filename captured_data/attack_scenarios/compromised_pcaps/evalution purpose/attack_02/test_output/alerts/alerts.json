@@ -1,0 +1,41 @@
+[
+  {
+    "rule_id": "R016",
+    "description": "Polling order violation: expected READ_HOLDING_REGISTERS, got READ_COILS",
+    "severity": "medium",
+    "src": "10.10.10.100",
+    "dst": "10.10.10.10",
+    "function_code": 1,
+    "address": 804,
+    "timestamp": 1755261949.426698,
+    "uid": "C5wF7rGrIPzxWZWT8",
+    "value": 0,
+    "tid": 20507
+  },
+  {
+    "rule_id": "R016",
+    "description": "Polling order violation: expected READ_HOLDING_REGISTERS, got READ_COILS",
+    "severity": "medium",
+    "src": "10.10.10.100",
+    "dst": "10.10.10.10",
+    "function_code": 1,
+    "address": 804,
+    "timestamp": 1755261966.674901,
+    "uid": "Co86284URMXU9p5YL3",
+    "value": 0,
+    "tid": 19794
+  },
+  {
+    "rule_id": "R015",
+    "description": "State transition context/timing violation: 500 -> 500 in 118.90s",
+    "severity": "high",
+    "src": "10.10.20.30",
+    "dst": "10.10.10.10",
+    "function_code": 6,
+    "address": 1024,
+    "timestamp": 1755261970.171741,
+    "uid": "CItoot1PaEU5KQzObl",
+    "value": 500,
+    "tid": 267
+  }
+]

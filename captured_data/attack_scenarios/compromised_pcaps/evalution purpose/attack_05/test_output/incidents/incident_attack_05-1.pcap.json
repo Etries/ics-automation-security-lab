@@ -1,0 +1,1337 @@
+[
+  {
+    "incident_id": "INC-20250818-1c17f6a7030e5423",
+    "start_time": "2025-08-15T13:11:02.011346+00:00",
+    "end_time": "2025-08-15T13:11:18.114274+00:00",
+    "duration_seconds": 16.102928,
+    "severity": "medium",
+    "alert_count": 161,
+    "summary": "161 correlated alerts; rules: R009, R010.",
+    "affected_assets": [
+      "PLC1 \u2013 OpenPLC Runtime"
+    ],
+    "source_assets": [
+      "unknown_asset"
+    ],
+    "triggered_rules": [
+      "R009",
+      "R010"
+    ],
+    "source_ip": "10.10.10.100",
+    "destination_ip": "10.10.10.10",
+    "function_code": 4,
+    "register_address": 100,
+    "register_value": 0,
+    "transaction_id": 23939,
+    "mitre_attack": {
+      "tactic_id": "TA0007",
+      "tactic_name": "Discovery/Collection",
+      "tactic_description": "Information gathering or protocol abuse",
+      "technique_id": "T0812",
+      "technique_name": "Unknown",
+      "technique_description": ""
+    },
+    "nis2_compliance": {
+      "article_id": "Article 23",
+      "article_name": "Incident Reporting",
+      "description": "Detection and reporting",
+      "requirements": [
+        "Incident detection",
+        "Reporting",
+        "Response coordination"
+      ]
+    },
+    "timeline": [
+      {
+        "timestamp": "2025-08-15T13:11:02.011346+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:02.109006+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:02.216413+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:02.314807+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:02.416020+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:02.516011+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:02.625690+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:02.725089+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:02.817088+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:02.925114+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:03.025598+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:03.130869+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:03.232744+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:03.326587+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:03.433741+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:03.537325+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:03.645255+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:03.745532+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:03.831693+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:03.942713+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:04.047195+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:04.150553+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:04.252384+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:04.351081+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:04.445455+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:04.551274+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:04.649361+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:04.752340+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:04.854271+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:04.956071+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:05.062440+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:05.154778+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:05.260935+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:05.357015+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:05.453687+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:05.557725+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:05.665529+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:05.767499+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:05.869861+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:05.957422+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:06.067059+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:06.167748+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:06.266296+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:06.370001+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:06.469667+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:06.562818+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:06.677644+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:06.772236+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:06.881332+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:06.971787+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:07.091224+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:07.178813+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:07.273903+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:07.385154+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:07.476493+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:07.578360+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:07.684593+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:07.781589+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:07.889248+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:07.997587+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:08.083734+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:08.183942+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:08.285150+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:08.391774+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:08.498640+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:08.586180+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:08.692981+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:08.790968+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:08.907165+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:08.996461+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:09.094597+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:09.196433+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:09.294874+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:09.403031+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:09.494088+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:09.595529+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:09.702546+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:09.806754+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:09.897110+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:10.010876+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:10.097961+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:10.210695+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:10.304266+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:10.408377+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:10.525574+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:10.606562+00:00",
+        "rule_id": "R009",
+        "description": "Replay attack detected - same TID repeated",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:10.606562+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:10.714172+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:10.815426+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:10.916701+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:11.015964+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:11.117202+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:11.215722+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:11.315334+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:11.415431+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:11.527194+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:11.617066+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:11.719366+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:11.821459+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:11.922434+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:12.021839+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:12.125507+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:12.223856+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:12.325531+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:12.426759+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:12.528403+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:12.625874+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:12.726015+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:12.837865+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:12.936101+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:13.040046+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:13.142711+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:13.234172+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:13.341131+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:13.441131+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:13.548150+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:13.639692+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:13.743339+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:13.857334+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:13.957828+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:14.059827+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:14.150174+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:14.257605+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:14.361069+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:14.470315+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:14.562048+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:14.660140+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:14.768477+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:14.861838+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:14.970082+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:15.068334+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:15.172642+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:15.268812+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:15.375978+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:15.470844+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:15.578194+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:15.670696+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:15.784802+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:15.879045+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:15.981547+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:16.088204+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:16.182014+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:16.285368+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:16.396064+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:16.498187+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:16.589740+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:16.693137+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:16.793143+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:16.895650+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:17.005981+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:17.101864+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:17.207920+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:17.297374+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:17.408734+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:17.499658+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:17.605772+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:17.702207+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:17.813865+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:17.906929+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:18.019210+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:11:18.114274+00:00",
+        "rule_id": "R010",
+        "description": "Frequency anomaly - excessive requests",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      }
+    ],
+    "detection_method": "passive_network_analysis",
+    "status": "open"
+  }
+]

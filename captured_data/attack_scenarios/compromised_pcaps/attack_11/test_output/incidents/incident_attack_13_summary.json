@@ -1,0 +1,86 @@
+{
+  "summary": {
+    "total_incidents": 1,
+    "critical_incidents": 0,
+    "high_incidents": 1,
+    "severity_distribution": {
+      "high": 1
+    },
+    "rule_distribution": {
+      "R015": 1
+    }
+  },
+  "critical_incidents": [],
+  "high_incidents": [
+    {
+      "incident_id": "INC-20250817-52865dd83c4129df",
+      "start_time": "2025-08-16T16:24:39.969869+00:00",
+      "end_time": "2025-08-16T16:28:40.889702+00:00",
+      "duration_seconds": 240.919833,
+      "severity": "high",
+      "alert_count": 3,
+      "summary": "3 correlated alerts; rules: R015.",
+      "affected_assets": [
+        "PLC1 \u2013 OpenPLC Runtime"
+      ],
+      "source_assets": [
+        "HMI \u2013 AdvancedHMI (Windows)"
+      ],
+      "triggered_rules": [
+        "R015"
+      ],
+      "source_ip": "10.10.20.30",
+      "destination_ip": "10.10.10.10",
+      "function_code": 6,
+      "register_address": 1024,
+      "register_value": 500,
+      "transaction_id": 449,
+      "mitre_attack": {
+        "tactic_id": "TA0007",
+        "tactic_name": "Discovery/Collection",
+        "tactic_description": "Information gathering or protocol abuse",
+        "technique_id": "T0812",
+        "technique_name": "Unknown",
+        "technique_description": ""
+      },
+      "nis2_compliance": {
+        "article_id": "Article 23",
+        "article_name": "Incident Reporting",
+        "description": "Detection and reporting",
+        "requirements": [
+          "Incident detection",
+          "Reporting",
+          "Response coordination"
+        ]
+      },
+      "timeline": [
+        {
+          "timestamp": "2025-08-16T16:24:39.969869+00:00",
+          "rule_id": "R015",
+          "description": "State transition timing violation - invalid timing between states",
+          "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+          "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+          "details": "Register: start_cmd (1024), Value: 500"
+        },
+        {
+          "timestamp": "2025-08-16T16:24:42.765678+00:00",
+          "rule_id": "R015",
+          "description": "State transition timing violation - invalid timing between states",
+          "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+          "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+          "details": "Register: start_cmd (1024), Value: 500"
+        },
+        {
+          "timestamp": "2025-08-16T16:28:40.889702+00:00",
+          "rule_id": "R015",
+          "description": "State transition timing violation - invalid timing between states",
+          "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+          "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+          "details": "Register: start_cmd (1024), Value: 500"
+        }
+      ],
+      "detection_method": "passive_network_analysis",
+      "status": "open"
+    }
+  ]
+}

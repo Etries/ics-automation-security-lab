@@ -1,0 +1,698 @@
+[
+  {
+    "incident_id": "INC-20250817-46850ac5e490e763",
+    "start_time": "2025-08-17T10:54:26.794373+00:00",
+    "end_time": "2025-08-17T10:54:26.794373+00:00",
+    "duration_seconds": 0.0,
+    "severity": "medium",
+    "alert_count": 1,
+    "summary": "1 correlated alerts; rules: R016.",
+    "affected_assets": [
+      "PLC1 \u2013 OpenPLC Runtime"
+    ],
+    "source_assets": [
+      "HMI \u2013 AdvancedHMI (Windows)"
+    ],
+    "triggered_rules": [
+      "R016"
+    ],
+    "source_ip": "10.10.20.30",
+    "destination_ip": "10.10.10.10",
+    "function_code": 1,
+    "register_address": 800,
+    "register_value": 0,
+    "transaction_id": 288,
+    "mitre_attack": {
+      "tactic_id": "TA0007",
+      "tactic_name": "Discovery/Collection",
+      "tactic_description": "Information gathering or protocol abuse",
+      "technique_id": "T0812",
+      "technique_name": "Unknown",
+      "technique_description": ""
+    },
+    "nis2_compliance": {
+      "article_id": "Article 23",
+      "article_name": "Incident Reporting",
+      "description": "Detection and reporting",
+      "requirements": [
+        "Incident detection",
+        "Reporting",
+        "Response coordination"
+      ]
+    },
+    "timeline": [
+      {
+        "timestamp": "2025-08-17T10:54:26.794373+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: unknown_register (800), Value: 0"
+      }
+    ],
+    "detection_method": "passive_network_analysis",
+    "status": "open"
+  },
+  {
+    "incident_id": "INC-20250817-d6bc5a207e77fb1b",
+    "start_time": "2025-08-17T10:54:26.795292+00:00",
+    "end_time": "2025-08-17T10:54:28.660433+00:00",
+    "duration_seconds": 1.865141,
+    "severity": "medium",
+    "alert_count": 2,
+    "summary": "2 correlated alerts; rules: R005, R016.",
+    "affected_assets": [
+      "PLC1 \u2013 OpenPLC Runtime"
+    ],
+    "source_assets": [
+      "unknown_asset"
+    ],
+    "triggered_rules": [
+      "R005",
+      "R016"
+    ],
+    "source_ip": "10.10.20.100",
+    "destination_ip": "10.10.10.10",
+    "function_code": 1,
+    "register_address": 800,
+    "register_value": 0,
+    "transaction_id": 288,
+    "mitre_attack": {
+      "tactic_id": "TA0007",
+      "tactic_name": "Discovery/Collection",
+      "tactic_description": "Information gathering or protocol abuse",
+      "technique_id": "T0812",
+      "technique_name": "Unknown",
+      "technique_description": ""
+    },
+    "nis2_compliance": {
+      "article_id": "Article 23",
+      "article_name": "Incident Reporting",
+      "description": "Detection and reporting",
+      "requirements": [
+        "Incident detection",
+        "Reporting",
+        "Response coordination"
+      ]
+    },
+    "timeline": [
+      {
+        "timestamp": "2025-08-17T10:54:26.795292+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "unknown_asset (10.10.20.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: unknown_register (800), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-17T10:54:28.660433+00:00",
+        "rule_id": "R005",
+        "description": "Role violation: Unauthorized IP 10.10.20.100 wrote register 1024",
+        "source": "unknown_asset (10.10.20.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: start_cmd (1024), Value: 500"
+      }
+    ],
+    "detection_method": "passive_network_analysis",
+    "status": "open"
+  },
+  {
+    "incident_id": "INC-20250817-9c564f70d33cf114",
+    "start_time": "2025-08-17T10:54:29.388066+00:00",
+    "end_time": "2025-08-17T10:54:29.388066+00:00",
+    "duration_seconds": 0.0,
+    "severity": "medium",
+    "alert_count": 1,
+    "summary": "1 correlated alerts; rules: R016.",
+    "affected_assets": [
+      "PLC1 \u2013 OpenPLC Runtime"
+    ],
+    "source_assets": [
+      "HMI \u2013 AdvancedHMI (Windows)"
+    ],
+    "triggered_rules": [
+      "R016"
+    ],
+    "source_ip": "10.10.20.30",
+    "destination_ip": "10.10.10.10",
+    "function_code": 1,
+    "register_address": 800,
+    "register_value": 0,
+    "transaction_id": 304,
+    "mitre_attack": {
+      "tactic_id": "TA0007",
+      "tactic_name": "Discovery/Collection",
+      "tactic_description": "Information gathering or protocol abuse",
+      "technique_id": "T0812",
+      "technique_name": "Unknown",
+      "technique_description": ""
+    },
+    "nis2_compliance": {
+      "article_id": "Article 23",
+      "article_name": "Incident Reporting",
+      "description": "Detection and reporting",
+      "requirements": [
+        "Incident detection",
+        "Reporting",
+        "Response coordination"
+      ]
+    },
+    "timeline": [
+      {
+        "timestamp": "2025-08-17T10:54:29.388066+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: unknown_register (800), Value: 0"
+      }
+    ],
+    "detection_method": "passive_network_analysis",
+    "status": "open"
+  },
+  {
+    "incident_id": "INC-20250817-41d4f3350f99ef6b",
+    "start_time": "2025-08-17T10:54:29.390783+00:00",
+    "end_time": "2025-08-17T10:54:39.590362+00:00",
+    "duration_seconds": 10.199579,
+    "severity": "medium",
+    "alert_count": 3,
+    "summary": "3 correlated alerts; rules: R005, R016.",
+    "affected_assets": [
+      "PLC1 \u2013 OpenPLC Runtime"
+    ],
+    "source_assets": [
+      "unknown_asset"
+    ],
+    "triggered_rules": [
+      "R005",
+      "R016"
+    ],
+    "source_ip": "10.10.20.100",
+    "destination_ip": "10.10.10.10",
+    "function_code": 1,
+    "register_address": 800,
+    "register_value": 0,
+    "transaction_id": 304,
+    "mitre_attack": {
+      "tactic_id": "TA0007",
+      "tactic_name": "Discovery/Collection",
+      "tactic_description": "Information gathering or protocol abuse",
+      "technique_id": "T0812",
+      "technique_name": "Unknown",
+      "technique_description": ""
+    },
+    "nis2_compliance": {
+      "article_id": "Article 23",
+      "article_name": "Incident Reporting",
+      "description": "Detection and reporting",
+      "requirements": [
+        "Incident detection",
+        "Reporting",
+        "Response coordination"
+      ]
+    },
+    "timeline": [
+      {
+        "timestamp": "2025-08-17T10:54:29.390783+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "unknown_asset (10.10.20.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: unknown_register (800), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-17T10:54:33.663259+00:00",
+        "rule_id": "R005",
+        "description": "Role violation: Unauthorized IP 10.10.20.100 wrote register 1024",
+        "source": "unknown_asset (10.10.20.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: start_cmd (1024), Value: 100"
+      },
+      {
+        "timestamp": "2025-08-17T10:54:39.590362+00:00",
+        "rule_id": "R005",
+        "description": "Role violation: Unauthorized IP 10.10.20.100 wrote register 1024",
+        "source": "unknown_asset (10.10.20.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: start_cmd (1024), Value: 400"
+      }
+    ],
+    "detection_method": "passive_network_analysis",
+    "status": "open"
+  },
+  {
+    "incident_id": "INC-20250817-00498449139d6f2b",
+    "start_time": "2025-08-17T10:54:41.910733+00:00",
+    "end_time": "2025-08-17T10:54:41.910733+00:00",
+    "duration_seconds": 0.0,
+    "severity": "medium",
+    "alert_count": 1,
+    "summary": "1 correlated alerts; rules: R016.",
+    "affected_assets": [
+      "PLC1 \u2013 OpenPLC Runtime"
+    ],
+    "source_assets": [
+      "HMI \u2013 AdvancedHMI (Windows)"
+    ],
+    "triggered_rules": [
+      "R016"
+    ],
+    "source_ip": "10.10.20.30",
+    "destination_ip": "10.10.10.10",
+    "function_code": 1,
+    "register_address": 800,
+    "register_value": 0,
+    "transaction_id": 338,
+    "mitre_attack": {
+      "tactic_id": "TA0007",
+      "tactic_name": "Discovery/Collection",
+      "tactic_description": "Information gathering or protocol abuse",
+      "technique_id": "T0812",
+      "technique_name": "Unknown",
+      "technique_description": ""
+    },
+    "nis2_compliance": {
+      "article_id": "Article 23",
+      "article_name": "Incident Reporting",
+      "description": "Detection and reporting",
+      "requirements": [
+        "Incident detection",
+        "Reporting",
+        "Response coordination"
+      ]
+    },
+    "timeline": [
+      {
+        "timestamp": "2025-08-17T10:54:41.910733+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: unknown_register (800), Value: 0"
+      }
+    ],
+    "detection_method": "passive_network_analysis",
+    "status": "open"
+  },
+  {
+    "incident_id": "INC-20250817-ff9beb5cf5c49e35",
+    "start_time": "2025-08-17T10:54:41.913442+00:00",
+    "end_time": "2025-08-17T10:54:41.913442+00:00",
+    "duration_seconds": 0.0,
+    "severity": "medium",
+    "alert_count": 1,
+    "summary": "1 correlated alerts; rules: R016.",
+    "affected_assets": [
+      "PLC1 \u2013 OpenPLC Runtime"
+    ],
+    "source_assets": [
+      "unknown_asset"
+    ],
+    "triggered_rules": [
+      "R016"
+    ],
+    "source_ip": "10.10.20.100",
+    "destination_ip": "10.10.10.10",
+    "function_code": 1,
+    "register_address": 800,
+    "register_value": 0,
+    "transaction_id": 338,
+    "mitre_attack": {
+      "tactic_id": "TA0007",
+      "tactic_name": "Discovery/Collection",
+      "tactic_description": "Information gathering or protocol abuse",
+      "technique_id": "T0812",
+      "technique_name": "Unknown",
+      "technique_description": ""
+    },
+    "nis2_compliance": {
+      "article_id": "Article 23",
+      "article_name": "Incident Reporting",
+      "description": "Detection and reporting",
+      "requirements": [
+        "Incident detection",
+        "Reporting",
+        "Response coordination"
+      ]
+    },
+    "timeline": [
+      {
+        "timestamp": "2025-08-17T10:54:41.913442+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "unknown_asset (10.10.20.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: unknown_register (800), Value: 0"
+      }
+    ],
+    "detection_method": "passive_network_analysis",
+    "status": "open"
+  },
+  {
+    "incident_id": "INC-20250817-2fa4429b1fd1265b",
+    "start_time": "2025-08-17T10:56:09.450964+00:00",
+    "end_time": "2025-08-17T10:56:09.450964+00:00",
+    "duration_seconds": 0.0,
+    "severity": "high",
+    "alert_count": 1,
+    "summary": "1 correlated alerts; rules: R015.",
+    "affected_assets": [
+      "PLC1 \u2013 OpenPLC Runtime"
+    ],
+    "source_assets": [
+      "HMI \u2013 AdvancedHMI (Windows)"
+    ],
+    "triggered_rules": [
+      "R015"
+    ],
+    "source_ip": "10.10.20.30",
+    "destination_ip": "10.10.10.10",
+    "function_code": 6,
+    "register_address": 1024,
+    "register_value": 500,
+    "transaction_id": 335,
+    "mitre_attack": {
+      "tactic_id": "TA0007",
+      "tactic_name": "Discovery/Collection",
+      "tactic_description": "Information gathering or protocol abuse",
+      "technique_id": "T0812",
+      "technique_name": "Unknown",
+      "technique_description": ""
+    },
+    "nis2_compliance": {
+      "article_id": "Article 23",
+      "article_name": "Incident Reporting",
+      "description": "Detection and reporting",
+      "requirements": [
+        "Incident detection",
+        "Reporting",
+        "Response coordination"
+      ]
+    },
+    "timeline": [
+      {
+        "timestamp": "2025-08-17T10:56:09.450964+00:00",
+        "rule_id": "R015",
+        "description": "State transition timing violation - invalid timing between states",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: start_cmd (1024), Value: 500"
+      }
+    ],
+    "detection_method": "passive_network_analysis",
+    "status": "open"
+  },
+  {
+    "incident_id": "INC-20250817-625b51cf0728ffbe",
+    "start_time": "2025-08-17T10:56:09.452724+00:00",
+    "end_time": "2025-08-17T10:56:09.452724+00:00",
+    "duration_seconds": 0.0,
+    "severity": "high",
+    "alert_count": 2,
+    "summary": "2 correlated alerts; rules: R005, R015.",
+    "affected_assets": [
+      "PLC1 \u2013 OpenPLC Runtime"
+    ],
+    "source_assets": [
+      "unknown_asset"
+    ],
+    "triggered_rules": [
+      "R005",
+      "R015"
+    ],
+    "source_ip": "10.10.20.100",
+    "destination_ip": "10.10.10.10",
+    "function_code": 6,
+    "register_address": 1024,
+    "register_value": 500,
+    "transaction_id": 335,
+    "mitre_attack": {
+      "tactic_id": "",
+      "tactic_name": "Unknown",
+      "tactic_description": "",
+      "technique_id": "",
+      "technique_name": "Unknown",
+      "technique_description": ""
+    },
+    "nis2_compliance": {
+      "article_id": null,
+      "article_name": "Unknown",
+      "description": "",
+      "requirements": []
+    },
+    "timeline": [
+      {
+        "timestamp": "2025-08-17T10:56:09.452724+00:00",
+        "rule_id": "R005",
+        "description": "Role violation: Unauthorized IP 10.10.20.100 wrote register 1024",
+        "source": "unknown_asset (10.10.20.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: start_cmd (1024), Value: 500"
+      },
+      {
+        "timestamp": "2025-08-17T10:56:09.452724+00:00",
+        "rule_id": "R015",
+        "description": "State transition timing violation - invalid timing between states",
+        "source": "unknown_asset (10.10.20.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: start_cmd (1024), Value: 500"
+      }
+    ],
+    "detection_method": "passive_network_analysis",
+    "status": "open"
+  },
+  {
+    "incident_id": "INC-20250817-a882dd6ef1478991",
+    "start_time": "2025-08-17T10:56:10.269090+00:00",
+    "end_time": "2025-08-17T10:56:10.269090+00:00",
+    "duration_seconds": 0.0,
+    "severity": "medium",
+    "alert_count": 1,
+    "summary": "1 correlated alerts; rules: R016.",
+    "affected_assets": [
+      "PLC1 \u2013 OpenPLC Runtime"
+    ],
+    "source_assets": [
+      "HMI \u2013 AdvancedHMI (Windows)"
+    ],
+    "triggered_rules": [
+      "R016"
+    ],
+    "source_ip": "10.10.20.30",
+    "destination_ip": "10.10.10.10",
+    "function_code": 1,
+    "register_address": 800,
+    "register_value": 0,
+    "transaction_id": 340,
+    "mitre_attack": {
+      "tactic_id": "TA0007",
+      "tactic_name": "Discovery/Collection",
+      "tactic_description": "Information gathering or protocol abuse",
+      "technique_id": "T0812",
+      "technique_name": "Unknown",
+      "technique_description": ""
+    },
+    "nis2_compliance": {
+      "article_id": "Article 23",
+      "article_name": "Incident Reporting",
+      "description": "Detection and reporting",
+      "requirements": [
+        "Incident detection",
+        "Reporting",
+        "Response coordination"
+      ]
+    },
+    "timeline": [
+      {
+        "timestamp": "2025-08-17T10:56:10.269090+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: unknown_register (800), Value: 0"
+      }
+    ],
+    "detection_method": "passive_network_analysis",
+    "status": "open"
+  },
+  {
+    "incident_id": "INC-20250817-8e1248b8076a8910",
+    "start_time": "2025-08-17T10:56:10.272072+00:00",
+    "end_time": "2025-08-17T10:56:22.056626+00:00",
+    "duration_seconds": 11.784554,
+    "severity": "medium",
+    "alert_count": 3,
+    "summary": "3 correlated alerts; rules: R005, R016.",
+    "affected_assets": [
+      "PLC1 \u2013 OpenPLC Runtime"
+    ],
+    "source_assets": [
+      "unknown_asset"
+    ],
+    "triggered_rules": [
+      "R005",
+      "R016"
+    ],
+    "source_ip": "10.10.20.100",
+    "destination_ip": "10.10.10.10",
+    "function_code": 1,
+    "register_address": 800,
+    "register_value": 0,
+    "transaction_id": 340,
+    "mitre_attack": {
+      "tactic_id": "TA0007",
+      "tactic_name": "Discovery/Collection",
+      "tactic_description": "Information gathering or protocol abuse",
+      "technique_id": "T0812",
+      "technique_name": "Unknown",
+      "technique_description": ""
+    },
+    "nis2_compliance": {
+      "article_id": "Article 23",
+      "article_name": "Incident Reporting",
+      "description": "Detection and reporting",
+      "requirements": [
+        "Incident detection",
+        "Reporting",
+        "Response coordination"
+      ]
+    },
+    "timeline": [
+      {
+        "timestamp": "2025-08-17T10:56:10.272072+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "unknown_asset (10.10.20.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: unknown_register (800), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-17T10:56:14.454462+00:00",
+        "rule_id": "R005",
+        "description": "Role violation: Unauthorized IP 10.10.20.100 wrote register 1024",
+        "source": "unknown_asset (10.10.20.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: start_cmd (1024), Value: 100"
+      },
+      {
+        "timestamp": "2025-08-17T10:56:22.056626+00:00",
+        "rule_id": "R005",
+        "description": "Role violation: Unauthorized IP 10.10.20.100 wrote register 1024",
+        "source": "unknown_asset (10.10.20.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: start_cmd (1024), Value: 400"
+      }
+    ],
+    "detection_method": "passive_network_analysis",
+    "status": "open"
+  },
+  {
+    "incident_id": "INC-20250817-102521efad30bbe3",
+    "start_time": "2025-08-17T10:56:22.804528+00:00",
+    "end_time": "2025-08-17T10:56:22.804528+00:00",
+    "duration_seconds": 0.0,
+    "severity": "medium",
+    "alert_count": 1,
+    "summary": "1 correlated alerts; rules: R016.",
+    "affected_assets": [
+      "PLC1 \u2013 OpenPLC Runtime"
+    ],
+    "source_assets": [
+      "HMI \u2013 AdvancedHMI (Windows)"
+    ],
+    "triggered_rules": [
+      "R016"
+    ],
+    "source_ip": "10.10.20.30",
+    "destination_ip": "10.10.10.10",
+    "function_code": 1,
+    "register_address": 800,
+    "register_value": 0,
+    "transaction_id": 374,
+    "mitre_attack": {
+      "tactic_id": "TA0007",
+      "tactic_name": "Discovery/Collection",
+      "tactic_description": "Information gathering or protocol abuse",
+      "technique_id": "T0812",
+      "technique_name": "Unknown",
+      "technique_description": ""
+    },
+    "nis2_compliance": {
+      "article_id": "Article 23",
+      "article_name": "Incident Reporting",
+      "description": "Detection and reporting",
+      "requirements": [
+        "Incident detection",
+        "Reporting",
+        "Response coordination"
+      ]
+    },
+    "timeline": [
+      {
+        "timestamp": "2025-08-17T10:56:22.804528+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "HMI \u2013 AdvancedHMI (Windows) (10.10.20.30)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: unknown_register (800), Value: 0"
+      }
+    ],
+    "detection_method": "passive_network_analysis",
+    "status": "open"
+  },
+  {
+    "incident_id": "INC-20250817-e7100346cbc88d3b",
+    "start_time": "2025-08-17T10:56:22.805917+00:00",
+    "end_time": "2025-08-17T10:56:22.805917+00:00",
+    "duration_seconds": 0.0,
+    "severity": "medium",
+    "alert_count": 1,
+    "summary": "1 correlated alerts; rules: R016.",
+    "affected_assets": [
+      "PLC1 \u2013 OpenPLC Runtime"
+    ],
+    "source_assets": [
+      "unknown_asset"
+    ],
+    "triggered_rules": [
+      "R016"
+    ],
+    "source_ip": "10.10.20.100",
+    "destination_ip": "10.10.10.10",
+    "function_code": 1,
+    "register_address": 800,
+    "register_value": 0,
+    "transaction_id": 374,
+    "mitre_attack": {
+      "tactic_id": "TA0007",
+      "tactic_name": "Discovery/Collection",
+      "tactic_description": "Information gathering or protocol abuse",
+      "technique_id": "T0812",
+      "technique_name": "Unknown",
+      "technique_description": ""
+    },
+    "nis2_compliance": {
+      "article_id": "Article 23",
+      "article_name": "Incident Reporting",
+      "description": "Detection and reporting",
+      "requirements": [
+        "Incident detection",
+        "Reporting",
+        "Response coordination"
+      ]
+    },
+    "timeline": [
+      {
+        "timestamp": "2025-08-17T10:56:22.805917+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "unknown_asset (10.10.20.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: unknown_register (800), Value: 0"
+      }
+    ],
+    "detection_method": "passive_network_analysis",
+    "status": "open"
+  }
+]

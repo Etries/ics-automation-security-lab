@@ -1,0 +1,15 @@
+[
+  {
+    "rule_id": "R015",
+    "description": "State transition context/timing violation: 500 -> 500 in 145.41s",
+    "severity": "high",
+    "src": "10.10.20.30",
+    "dst": "10.10.10.10",
+    "function_code": 6,
+    "address": 1024,
+    "timestamp": 1755360179.260312,
+    "uid": "CTFHta3tujm08v5CS4",
+    "value": 500,
+    "tid": 488
+  }
+]

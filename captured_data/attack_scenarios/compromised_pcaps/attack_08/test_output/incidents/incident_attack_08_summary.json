@@ -1,0 +1,358 @@
+{
+  "summary": {
+    "total_incidents": 13,
+    "critical_incidents": 6,
+    "high_incidents": 0,
+    "severity_distribution": {
+      "medium": 7,
+      "critical": 6
+    },
+    "rule_distribution": {
+      "R016": 7,
+      "R012": 6
+    }
+  },
+  "critical_incidents": [
+    {
+      "incident_id": "INC-20250817-10ef860b47295146",
+      "start_time": "2025-08-16T15:49:49.137868+00:00",
+      "end_time": "2025-08-16T15:49:49.137868+00:00",
+      "duration_seconds": 0.0,
+      "severity": "critical",
+      "alert_count": 1,
+      "summary": "1 correlated alerts; rules: R012.",
+      "affected_assets": [
+        "PLC1 \u2013 OpenPLC Runtime"
+      ],
+      "source_assets": [
+        "unknown_asset"
+      ],
+      "triggered_rules": [
+        "R012"
+      ],
+      "source_ip": "10.10.10.100",
+      "destination_ip": "10.10.10.10",
+      "function_code": 4,
+      "register_address": 100,
+      "register_value": "",
+      "transaction_id": "",
+      "mitre_attack": {
+        "tactic_id": "TA0007",
+        "tactic_name": "Discovery/Collection",
+        "tactic_description": "Information gathering or protocol abuse",
+        "technique_id": "T0812",
+        "technique_name": "Unknown",
+        "technique_description": ""
+      },
+      "nis2_compliance": {
+        "article_id": "Article 21",
+        "article_name": "Risk Management",
+        "description": "Risk assessment and measures",
+        "requirements": [
+          "Risk assessment",
+          "Security measures",
+          "Incident detection"
+        ]
+      },
+      "timeline": [
+        {
+          "timestamp": "2025-08-16T15:49:49.137868+00:00",
+          "rule_id": "R012",
+          "description": "VLAN violation - device on wrong VLAN",
+          "source": "unknown_asset (10.10.10.100)",
+          "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+          "details": "Register: tank_level (100), Value: N/A"
+        }
+      ],
+      "detection_method": "passive_network_analysis",
+      "status": "open"
+    },
+    {
+      "incident_id": "INC-20250817-38d4e2c4f594d85b",
+      "start_time": "2025-08-16T15:49:49.192735+00:00",
+      "end_time": "2025-08-16T15:49:49.192735+00:00",
+      "duration_seconds": 0.0,
+      "severity": "critical",
+      "alert_count": 1,
+      "summary": "1 correlated alerts; rules: R012.",
+      "affected_assets": [
+        "PLC1 \u2013 OpenPLC Runtime"
+      ],
+      "source_assets": [
+        "unknown_asset"
+      ],
+      "triggered_rules": [
+        "R012"
+      ],
+      "source_ip": "10.10.10.100",
+      "destination_ip": "10.10.10.10",
+      "function_code": 4,
+      "register_address": -1,
+      "register_value": "",
+      "transaction_id": "",
+      "mitre_attack": {
+        "tactic_id": "TA0007",
+        "tactic_name": "Discovery/Collection",
+        "tactic_description": "Information gathering or protocol abuse",
+        "technique_id": "T0812",
+        "technique_name": "Unknown",
+        "technique_description": ""
+      },
+      "nis2_compliance": {
+        "article_id": "Article 21",
+        "article_name": "Risk Management",
+        "description": "Risk assessment and measures",
+        "requirements": [
+          "Risk assessment",
+          "Security measures",
+          "Incident detection"
+        ]
+      },
+      "timeline": [
+        {
+          "timestamp": "2025-08-16T15:49:49.192735+00:00",
+          "rule_id": "R012",
+          "description": "VLAN violation - device on wrong VLAN",
+          "source": "unknown_asset (10.10.10.100)",
+          "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+          "details": "Register: unknown_register (-1), Value: N/A"
+        }
+      ],
+      "detection_method": "passive_network_analysis",
+      "status": "open"
+    },
+    {
+      "incident_id": "INC-20250817-86aed296cbc877c8",
+      "start_time": "2025-08-16T15:50:38.731928+00:00",
+      "end_time": "2025-08-16T15:50:38.731928+00:00",
+      "duration_seconds": 0.0,
+      "severity": "critical",
+      "alert_count": 1,
+      "summary": "1 correlated alerts; rules: R012.",
+      "affected_assets": [
+        "PLC1 \u2013 OpenPLC Runtime"
+      ],
+      "source_assets": [
+        "unknown_asset"
+      ],
+      "triggered_rules": [
+        "R012"
+      ],
+      "source_ip": "10.10.10.100",
+      "destination_ip": "10.10.10.10",
+      "function_code": 4,
+      "register_address": 100,
+      "register_value": "",
+      "transaction_id": "",
+      "mitre_attack": {
+        "tactic_id": "TA0007",
+        "tactic_name": "Discovery/Collection",
+        "tactic_description": "Information gathering or protocol abuse",
+        "technique_id": "T0812",
+        "technique_name": "Unknown",
+        "technique_description": ""
+      },
+      "nis2_compliance": {
+        "article_id": "Article 21",
+        "article_name": "Risk Management",
+        "description": "Risk assessment and measures",
+        "requirements": [
+          "Risk assessment",
+          "Security measures",
+          "Incident detection"
+        ]
+      },
+      "timeline": [
+        {
+          "timestamp": "2025-08-16T15:50:38.731928+00:00",
+          "rule_id": "R012",
+          "description": "VLAN violation - device on wrong VLAN",
+          "source": "unknown_asset (10.10.10.100)",
+          "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+          "details": "Register: tank_level (100), Value: N/A"
+        }
+      ],
+      "detection_method": "passive_network_analysis",
+      "status": "open"
+    },
+    {
+      "incident_id": "INC-20250817-d7dfd6bdbea5fd5e",
+      "start_time": "2025-08-16T15:50:38.817796+00:00",
+      "end_time": "2025-08-16T15:50:38.817796+00:00",
+      "duration_seconds": 0.0,
+      "severity": "critical",
+      "alert_count": 1,
+      "summary": "1 correlated alerts; rules: R012.",
+      "affected_assets": [
+        "PLC1 \u2013 OpenPLC Runtime"
+      ],
+      "source_assets": [
+        "unknown_asset"
+      ],
+      "triggered_rules": [
+        "R012"
+      ],
+      "source_ip": "10.10.10.100",
+      "destination_ip": "10.10.10.10",
+      "function_code": 4,
+      "register_address": -1,
+      "register_value": "",
+      "transaction_id": "",
+      "mitre_attack": {
+        "tactic_id": "TA0007",
+        "tactic_name": "Discovery/Collection",
+        "tactic_description": "Information gathering or protocol abuse",
+        "technique_id": "T0812",
+        "technique_name": "Unknown",
+        "technique_description": ""
+      },
+      "nis2_compliance": {
+        "article_id": "Article 21",
+        "article_name": "Risk Management",
+        "description": "Risk assessment and measures",
+        "requirements": [
+          "Risk assessment",
+          "Security measures",
+          "Incident detection"
+        ]
+      },
+      "timeline": [
+        {
+          "timestamp": "2025-08-16T15:50:38.817796+00:00",
+          "rule_id": "R012",
+          "description": "VLAN violation - device on wrong VLAN",
+          "source": "unknown_asset (10.10.10.100)",
+          "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+          "details": "Register: unknown_register (-1), Value: N/A"
+        }
+      ],
+      "detection_method": "passive_network_analysis",
+      "status": "open"
+    },
+    {
+      "incident_id": "INC-20250817-67c923b7d9143371",
+      "start_time": "2025-08-16T15:51:17.392715+00:00",
+      "end_time": "2025-08-16T15:51:17.435820+00:00",
+      "duration_seconds": 0.043105,
+      "severity": "critical",
+      "alert_count": 2,
+      "summary": "2 correlated alerts; rules: R012.",
+      "affected_assets": [
+        "PLC1 \u2013 OpenPLC Runtime"
+      ],
+      "source_assets": [
+        "unknown_asset"
+      ],
+      "triggered_rules": [
+        "R012"
+      ],
+      "source_ip": "10.10.10.100",
+      "destination_ip": "10.10.10.10",
+      "function_code": 4,
+      "register_address": 100,
+      "register_value": "",
+      "transaction_id": "",
+      "mitre_attack": {
+        "tactic_id": "TA0007",
+        "tactic_name": "Discovery/Collection",
+        "tactic_description": "Information gathering or protocol abuse",
+        "technique_id": "T0812",
+        "technique_name": "Unknown",
+        "technique_description": ""
+      },
+      "nis2_compliance": {
+        "article_id": "Article 21",
+        "article_name": "Risk Management",
+        "description": "Risk assessment and measures",
+        "requirements": [
+          "Risk assessment",
+          "Security measures",
+          "Incident detection"
+        ]
+      },
+      "timeline": [
+        {
+          "timestamp": "2025-08-16T15:51:17.392715+00:00",
+          "rule_id": "R012",
+          "description": "VLAN violation - device on wrong VLAN",
+          "source": "unknown_asset (10.10.10.100)",
+          "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+          "details": "Register: tank_level (100), Value: N/A"
+        },
+        {
+          "timestamp": "2025-08-16T15:51:17.435820+00:00",
+          "rule_id": "R012",
+          "description": "VLAN violation - device on wrong VLAN",
+          "source": "unknown_asset (10.10.10.100)",
+          "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+          "details": "Register: unknown_register (-1), Value: N/A"
+        }
+      ],
+      "detection_method": "passive_network_analysis",
+      "status": "open"
+    },
+    {
+      "incident_id": "INC-20250817-0c727d0afea84d92",
+      "start_time": "2025-08-16T15:51:20.425588+00:00",
+      "end_time": "2025-08-16T15:51:20.473581+00:00",
+      "duration_seconds": 0.047993,
+      "severity": "critical",
+      "alert_count": 2,
+      "summary": "2 correlated alerts; rules: R012.",
+      "affected_assets": [
+        "PLC1 \u2013 OpenPLC Runtime"
+      ],
+      "source_assets": [
+        "unknown_asset"
+      ],
+      "triggered_rules": [
+        "R012"
+      ],
+      "source_ip": "10.10.10.100",
+      "destination_ip": "10.10.10.10",
+      "function_code": 4,
+      "register_address": 100,
+      "register_value": "",
+      "transaction_id": "",
+      "mitre_attack": {
+        "tactic_id": "TA0007",
+        "tactic_name": "Discovery/Collection",
+        "tactic_description": "Information gathering or protocol abuse",
+        "technique_id": "T0812",
+        "technique_name": "Unknown",
+        "technique_description": ""
+      },
+      "nis2_compliance": {
+        "article_id": "Article 21",
+        "article_name": "Risk Management",
+        "description": "Risk assessment and measures",
+        "requirements": [
+          "Risk assessment",
+          "Security measures",
+          "Incident detection"
+        ]
+      },
+      "timeline": [
+        {
+          "timestamp": "2025-08-16T15:51:20.425588+00:00",
+          "rule_id": "R012",
+          "description": "VLAN violation - device on wrong VLAN",
+          "source": "unknown_asset (10.10.10.100)",
+          "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+          "details": "Register: tank_level (100), Value: N/A"
+        },
+        {
+          "timestamp": "2025-08-16T15:51:20.473581+00:00",
+          "rule_id": "R012",
+          "description": "VLAN violation - device on wrong VLAN",
+          "source": "unknown_asset (10.10.10.100)",
+          "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+          "details": "Register: unknown_register (-1), Value: N/A"
+        }
+      ],
+      "detection_method": "passive_network_analysis",
+      "status": "open"
+    }
+  ],
+  "high_incidents": []
+}

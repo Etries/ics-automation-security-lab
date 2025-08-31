@@ -1,0 +1,28 @@
+[
+  {
+    "rule_id": "R016",
+    "description": "Polling start violation: READ_HOLDING_REGISTERS is not a valid sequence start",
+    "severity": "medium",
+    "src": "10.10.20.30",
+    "dst": "10.10.10.10",
+    "function_code": 3,
+    "address": 1024,
+    "timestamp": 1755263716.373478,
+    "uid": "CbjoVj13W4auY989pf",
+    "value": 0,
+    "tid": 277
+  },
+  {
+    "rule_id": "R006",
+    "description": "Illegal function code used: 16",
+    "severity": "high",
+    "src": "10.10.10.100",
+    "dst": "10.10.10.10",
+    "function_code": 16,
+    "address": 1024,
+    "timestamp": 1755263717.723003,
+    "uid": "CyzKTI31o4Ebb8mPd8",
+    "value": 500,
+    "tid": 13211
+  }
+]

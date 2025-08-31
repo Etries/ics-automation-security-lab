@@ -1,0 +1,41 @@
+[
+  {
+    "rule_id": "R009",
+    "description": "Potential replay attack (TID 4242)",
+    "severity": "medium",
+    "src": "10.10.10.100",
+    "dst": "10.10.10.10",
+    "function_code": 4,
+    "address": 100,
+    "timestamp": 1755263190.981905,
+    "uid": "CAf4EK16gSQ4dlKPz6",
+    "value": 0,
+    "tid": 4242
+  },
+  {
+    "rule_id": "R009",
+    "description": "Potential replay attack (TID 4242)",
+    "severity": "medium",
+    "src": "10.10.10.100",
+    "dst": "10.10.10.10",
+    "function_code": 4,
+    "address": 100,
+    "timestamp": 1755263193.696537,
+    "uid": "CkZ6et3NxrQ8baStTg",
+    "value": 0,
+    "tid": 4242
+  },
+  {
+    "rule_id": "R009",
+    "description": "Potential replay attack (TID 4242)",
+    "severity": "medium",
+    "src": "10.10.10.100",
+    "dst": "10.10.10.10",
+    "function_code": 4,
+    "address": 100,
+    "timestamp": 1755263197.53052,
+    "uid": "CE3GIL3EKjpOZSt16b",
+    "value": 0,
+    "tid": 4242
+  }
+]

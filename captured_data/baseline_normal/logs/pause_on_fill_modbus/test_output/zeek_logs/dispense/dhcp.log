@@ -1,0 +1,29 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	dhcp
+#open	2025-07-15-12-04-44
+#fields	ts	uids	client_addr	server_addr	mac	host_name	client_fqdn	domain	requested_addr	assigned_addr	lease_time	client_message	server_message	msg_types	duration
+#types	time	set[string]	addr	addr	string	string	string	string	addr	addr	interval	string	string	vector[string]	interval
+1752511377.347229	CSOXks27LVkP4Z2xq3	-	-	08:00:27:11:68:b4	OpenPLC	-	-	-	-	-	-	-	DISCOVER	0.000000
+1752511380.249257	CSOXks27LVkP4Z2xq3	-	-	08:00:27:11:68:b4	OpenPLC	-	-	-	-	-	-	-	DISCOVER	0.000000
+1752511385.189018	CSOXks27LVkP4Z2xq3	-	-	08:00:27:11:68:b4	OpenPLC	-	-	-	-	-	-	-	DISCOVER	0.000000
+1752511393.350441	CSOXks27LVkP4Z2xq3	-	-	08:00:27:11:68:b4	OpenPLC	-	-	-	-	-	-	-	DISCOVER	0.000000
+1752511409.876408	CSOXks27LVkP4Z2xq3	-	-	08:00:27:11:68:b4	OpenPLC	-	-	-	-	-	-	-	DISCOVER	0.000000
+1752511422.368197	CSOXks27LVkP4Z2xq3	-	-	08:00:27:11:68:b4	OpenPLC	-	-	-	-	-	-	-	DISCOVER	0.000000
+1752511429.926859	CSOXks27LVkP4Z2xq3	-	-	08:00:27:11:68:b4	OpenPLC	-	-	-	-	-	-	-	DISCOVER	0.000000
+1752511425.313426	CSOXks27LVkP4Z2xq3	-	-	08:00:27:11:68:b4	OpenPLC	-	-	-	-	-	-	-	DISCOVER	0.000000
+1752511438.510187	CSOXks27LVkP4Z2xq3	-	-	08:00:27:11:68:b4	OpenPLC	-	-	-	-	-	-	-	DISCOVER	0.000000
+1752511454.658851	CSOXks27LVkP4Z2xq3	-	-	08:00:27:11:68:b4	OpenPLC	-	-	-	-	-	-	-	DISCOVER	0.000000
+1752511469.641216	CSOXks27LVkP4Z2xq3	-	-	08:00:27:11:68:b4	OpenPLC	-	-	-	-	-	-	-	DISCOVER	0.000000
+1752511467.361798	CSOXks27LVkP4Z2xq3	-	-	08:00:27:11:68:b4	OpenPLC	-	-	-	-	-	-	-	DISCOVER	0.000000
+1752511473.773617	CSOXks27LVkP4Z2xq3	-	-	08:00:27:11:68:b4	OpenPLC	-	-	-	-	-	-	-	DISCOVER	0.000000
+1752511482.609664	CSOXks27LVkP4Z2xq3	-	-	08:00:27:11:68:b4	OpenPLC	-	-	-	-	-	-	-	DISCOVER	0.000000
+1752511499.338376	CSOXks27LVkP4Z2xq3	-	-	08:00:27:11:68:b4	OpenPLC	-	-	-	-	-	-	-	DISCOVER	0.000000
+1752511514.889661	CSOXks27LVkP4Z2xq3	-	-	08:00:27:11:68:b4	OpenPLC	-	-	-	-	-	-	-	DISCOVER	0.000000
+1752511519.338146	CSOXks27LVkP4Z2xq3	-	-	08:00:27:11:68:b4	OpenPLC	-	-	-	-	-	-	-	DISCOVER	0.000000
+1752511512.372113	CSOXks27LVkP4Z2xq3	-	-	08:00:27:11:68:b4	OpenPLC	-	-	-	-	-	-	-	DISCOVER	0.000000
+1752511527.459135	CSOXks27LVkP4Z2xq3	-	-	08:00:27:11:68:b4	OpenPLC	-	-	-	-	-	-	-	DISCOVER	0.000000
+1752511543.681712	CSOXks27LVkP4Z2xq3	-	-	08:00:27:11:68:b4	OpenPLC	-	-	-	-	-	-	-	DISCOVER	0.000000
+#close	2025-07-15-12-04-45

@@ -1,0 +1,54 @@
+[
+  {
+    "rule_id": "R005",
+    "description": "Role violation: Unauthorized IP 10.10.20.100 wrote register 1024",
+    "severity": "medium",
+    "src": "10.10.20.100",
+    "dst": "10.10.10.10",
+    "function_code": 6,
+    "address": 1024,
+    "timestamp": 1755359796.431859,
+    "uid": "Ct0gud2mCD2zpjmnJ2",
+    "value": 500,
+    "tid": 9310
+  },
+  {
+    "rule_id": "R009",
+    "description": "Potential replay attack (TID 4321)",
+    "severity": "medium",
+    "src": "10.10.20.100",
+    "dst": "10.10.10.10",
+    "function_code": 4,
+    "address": 100,
+    "timestamp": 1755359797.394807,
+    "uid": "CY5nnM2oDvEp3vhWe2",
+    "value": 0,
+    "tid": 4321
+  },
+  {
+    "rule_id": "R005",
+    "description": "Role violation: Unauthorized IP 10.10.20.100 wrote register 1024",
+    "severity": "medium",
+    "src": "10.10.20.100",
+    "dst": "10.10.10.10",
+    "function_code": 6,
+    "address": 1024,
+    "timestamp": 1755359891.63819,
+    "uid": "C9SHaYfEfhsQ26cr",
+    "value": 500,
+    "tid": 29679
+  },
+  {
+    "rule_id": "R009",
+    "description": "Potential replay attack (TID 4321)",
+    "severity": "medium",
+    "src": "10.10.20.100",
+    "dst": "10.10.10.10",
+    "function_code": 4,
+    "address": 100,
+    "timestamp": 1755359892.579875,
+    "uid": "CZnfkF3P3p3H95UWe8",
+    "value": 0,
+    "tid": 4321
+  }
+]

@@ -1,0 +1,80 @@
+[
+  {
+    "incident_id": "INC-20250816-c635a668f1c5d55c",
+    "start_time": "2025-08-15T12:50:28.880390+00:00",
+    "end_time": "2025-08-15T12:50:34.415427+00:00",
+    "duration_seconds": 5.535037,
+    "severity": "medium",
+    "alert_count": 4,
+    "summary": "4 correlated alerts; rules: R016.",
+    "affected_assets": [
+      "PLC1 \u2013 OpenPLC Runtime"
+    ],
+    "source_assets": [
+      "unknown_asset"
+    ],
+    "triggered_rules": [
+      "R016"
+    ],
+    "source_ip": "10.10.10.100",
+    "destination_ip": "10.10.10.10",
+    "function_code": 3,
+    "register_address": 102,
+    "register_value": 0,
+    "transaction_id": 881,
+    "mitre_attack": {
+      "tactic_id": "TA0007",
+      "tactic_name": "Discovery/Collection",
+      "tactic_description": "Information gathering or protocol abuse",
+      "technique_id": "T0812",
+      "technique_name": "Unknown",
+      "technique_description": ""
+    },
+    "nis2_compliance": {
+      "article_id": "Article 23",
+      "article_name": "Incident Reporting",
+      "description": "Detection and reporting",
+      "requirements": [
+        "Incident detection",
+        "Reporting",
+        "Response coordination"
+      ]
+    },
+    "timeline": [
+      {
+        "timestamp": "2025-08-15T12:50:28.880390+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: process_state (102), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T12:50:29.071167+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: mixing_done (804), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T12:50:34.292889+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: process_state (102), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T12:50:34.415427+00:00",
+        "rule_id": "R016",
+        "description": "Polling sequence violation - broken rhythm or incorrect sequence",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: mixing_done (804), Value: 0"
+      }
+    ],
+    "detection_method": "passive_network_analysis",
+    "status": "open"
+  }
+]

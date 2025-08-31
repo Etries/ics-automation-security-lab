@@ -1,0 +1,18 @@
+#separator \x09
+#set_separator	,
+#empty_field	(empty)
+#unset_field	-
+#path	conn
+#open	2025-08-18-15-23-43
+#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	proto	service	duration	orig_bytes	resp_bytes	conn_state	local_orig	local_resp	missed_bytes	history	orig_pkts	orig_ip_bytes	resp_pkts	resp_ip_bytes	tunnel_parents	ip_proto
+#types	time	string	addr	port	addr	port	enum	string	interval	count	count	string	bool	bool	count	string	count	count	count	count	set[string]	count
+1755263000.523622	Ctc5n33RO098LRBeQ7	10.10.10.100	55221	10.10.10.10	502	tcp	modbus	0.072903	12	11	SF	T	T	0	ShADadFf	6	332	4	227	-	6
+1755263001.096951	Ca3OsvbhxammTaM77	10.10.10.100	46375	10.10.10.10	502	tcp	modbus	0.107435	12	11	SF	T	T	0	ShADadFf	6	332	4	227	-	6
+1755263005.027608	CfR0Ay1VGI8aewkZg9	10.10.10.100	35787	10.10.10.10	502	tcp	modbus	0.006980	12	11	SF	T	T	0	ShADadFf	6	332	4	227	-	6
+1755263005.534849	CZgd1D4vi1bjxnKUMg	10.10.10.100	59867	10.10.10.10	502	tcp	modbus	0.112232	12	11	SF	T	T	0	ShADadFf	6	332	4	227	-	6
+1755263017.786136	CvMddH2J41cXyAsPCi	10.10.10.100	55393	10.10.10.10	502	tcp	modbus	0.046462	12	11	SF	T	T	0	ShADadFf	6	332	4	227	-	6
+1755263018.333440	C4boxZ3BY0xHV2B1u1	10.10.10.100	59023	10.10.10.10	502	tcp	modbus	0.109876	12	11	SF	T	T	0	ShADadFf	6	332	4	227	-	6
+1755263023.111579	CTdBGX3nEwyghxWaE	10.10.10.100	40735	10.10.10.10	502	tcp	modbus	0.058892	12	11	SF	T	T	0	ShADadFf	6	332	4	227	-	6
+1755263023.667849	CI7Xzp42Ak5q3swz6	10.10.10.100	44497	10.10.10.10	502	tcp	modbus	0.105026	12	11	SF	T	T	0	ShADadFf	6	332	4	227	-	6
+1755262848.953447	CuSdns3Lo0IE3JC31c	10.10.20.30	57876	10.10.10.10	502	tcp	modbus	256.042720	17820	15844	OTH	T	T	0	ADTdtTtTtTt	5936	273080	2970	150488	-	6
+#close	2025-08-18-15-23-43

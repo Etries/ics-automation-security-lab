@@ -1,0 +1,186 @@
+# ===================================================================
+# Universal ICS Security Policy - Context-Aware Detection
+# ===================================================================
+
+policy_name: "BottlingPlant_Comprehensive_Policy_v4.1"
+description: "Policy-driven thresholds; IDs aligned with detector; contextual timing and polling rules."
+
+# -------------------------------------------------------------------
+# Engine parameters (NO hard-coding in code)
+# -------------------------------------------------------------------
+parameters:
+  excessive_requests:
+    window_seconds: 5.0
+    max_requests: 40
+  replay_window_seconds: 2.0
+  tid_pattern:
+    allowed_reset_jump: 250
+  tampering:
+    enabled: true
+    checks:
+      - level_register: tank_level         # name from addr_map
+        threshold: { op: '>=', value: 80 } # matches registers[100].value_range max
+        alarm_register: alarm_flag         # name from addr_map
+        alarm_expected: 1
+        within_seconds: 5.0
+
+# ===================================================================
+# Section 1: Rules for State-Changing WRITE Commands
+# ===================================================================
+write_value_rules:
+  valid_states: [100, 400, 500]
+
+  # Contextual state transitions with optional 'preceded_by'
+  state_transitions:
+    "500":
+      "500":
+        - { min_time: 85.0, max_time: 100.0, description: "Normal Fill cycle" }
+      "100":
+        - { min_time: 5.0,  max_time: 15.0, description: "Pause on Fill cycle start" }
+        - { min_time: 50.0, max_time: 70.0, description: "Pause on Dispense cycle start" }
+
+    "100":
+      "400":
+        - min_time: 15.0
+          max_time: 25.0
+          description: "Resume after a 'Pause on Fill'"
+          preceded_by: { state: 500, min_time: 5.0,  max_time: 15.0 }
+        - min_time: 15.0
+          max_time: 25.0
+          description: "Resume after a 'Pause on Dispense'"
+          preceded_by: { state: 500, min_time: 50.0, max_time: 70.0 }
+
+    "400":
+      "500":
+        - min_time: 30.0
+          max_time: 45.0
+          description: "End of 'Pause on Dispense' cycle"
+          preceded_by: { state: 100, min_time: 15.0, max_time: 25.0 }
+        - min_time: 75.0
+          max_time: 95.0
+          description: "End of 'Pause on Fill' cycle"
+          preceded_by: { state: 100, min_time: 15.0, max_time: 25.0 }
+
+# ===================================================================
+# Section 2: Rules for Rhythmic READ Polling
+# ===================================================================
+polling_rules:
+  max_idle_time: 10.0
+  sequences:
+    - name: "Normal_and_PauseFill_Poll"
+      function_sequence: ["READ_COILS", "READ_INPUT_REGISTERS", "READ_HOLDING_REGISTERS"]
+      inter_request_interval: { min_time: 0.140, max_time: 1.100 }
+    - name: "PauseDispense_Poll"
+      function_sequence: ["READ_INPUT_REGISTERS", "READ_COILS", "READ_HOLDING_REGISTERS"]
+      inter_request_interval: { min_time: 0.140, max_time: 1.100 }
+
+# ===================================================================
+# Section 3: Network and Protocol Rules
+# ===================================================================
+network:
+  ip_to_vlan_map: { '10.10.10.10': 10, '10.10.20.30': 20 }
+  authorized_ips: ['10.10.20.30', '10.10.10.100']
+  authorized_registers:
+    '10.10.20.30': [1024]
+
+  # IMPORTANT: IDs must match what detect.py emits
+  ip_whitelist_rule:
+    id: R014
+    description: "Device spoofing attempt from unauthorized IP"
+    severity: critical
+    mitre: { tactic: TA0007, technique: T0812 }
+    real_world: "Impersonation attacks"
+    nis2_article: "Article 23"
+
+  network_segmentation_rule:
+    id: R012
+    description: "VLAN violation - device on wrong VLAN"
+    severity: critical
+    mitre: { tactic: TA0007, technique: T0812 }
+    real_world: "VLAN Hopping, Network Misconfiguration"
+    nis2_article: "Article 21"
+
+protocol:
+  allowed_funcs: [1, 3, 4, 6]
+  function_code_rule:
+    id: R006
+    description: "Illegal Modbus function code used"
+    severity: high
+    mitre: { tactic: TA0007, technique: T0812 }
+    real_world: "Protocol abuse, fuzzing"
+    nis2_article: "Article 23"
+
+# ===================================================================
+# Section 4: Register Semantics + Per-register Rules
+# ===================================================================
+registers:
+  - address: 100
+    name: 'tank_level'
+    access: 'read-only'
+    value_range: [0, 80]
+    max_rate_of_change: 10.0
+    rules:
+      - { id: R002, description: "Physical constraint violation - impossible tank level", severity: high, mitre: { tactic: TA0007, technique: T0812 }, real_world: "Maroochy attack", nis2_article: "Article 21.b" }
+
+  - address: 1024
+    name: 'start_cmd'
+    access: 'read-write'
+    allowed_write_values: [100, 400, 500]
+    rules:
+      - { id: R001, description: "Unauthorized write to control register", severity: high, mitre: { tactic: TA0006, technique: T0831 }, real_world: "Triton (2017)", nis2_article: "Article 23" }
+
+  - address: 102
+    name: 'process_state'
+    access: 'read-only'
+
+  - address: 804
+    name: 'mixing_done'
+    access: 'read-only'
+
+# Optional higher-level rule metadata used by the builder’s enrichment
+role_violation_rule:
+  id: R005
+  description: "Role violation: Unauthorized IP wrote command register"
+  severity: high
+  mitre: { tactic: TA0006, technique: T0831 }
+  real_world: "Unauthorized control by non-HMI node"
+  nis2_article: "Article 23"
+
+state_logic_rule:
+  id: R008
+  description: "Process state violation - invalid command for current state"
+  severity: high
+  mitre: { tactic: TA0007, technique: T0812 }
+  real_world: "Logic abuse"
+  nis2_article: "Article 21"
+
+state_transition_rule:
+  id: R015
+  description: "State transition timing violation - invalid timing between states"
+  severity: high
+  mitre: { tactic: TA0007, technique: T0812 }
+  real_world: "Timing-based attacks, Process manipulation"
+  nis2_article: "Article 23"
+
+polling_sequence_rule:
+  id: R016
+  description: "Polling sequence violation - broken rhythm or incorrect sequence"
+  severity: medium
+  mitre: { tactic: TA0007, technique: T0812 }
+  real_world: "Replay attacks, Timing manipulation"
+  nis2_article: "Article 23"
+
+# These IDs MUST match detector outputs for enrichment to work
+global_rules:
+  - { id: R009, description: "Replay attack detected - same TID repeated", severity: medium, mitre: { tactic: TA0008, technique: T0815 }, real_world: "Stuxnet", nis2_article: "Article 23" }
+  - { id: R010, description: "Frequency anomaly - excessive requests", severity: medium, mitre: { tactic: TA0007, technique: T0812 }, real_world: "Denial of Service precursor", nis2_article: "Article 23" }
+  - { id: R013, description: "Non-sequential or suspicious TID pattern", severity: medium, mitre: { tactic: TA0007, technique: T0812 }, real_world: "Traffic manipulation", nis2_article: "Article 23" }
+
+multi_stage_rule:
+  id: R011
+  description: "Multi-stage attack: start_cmd + replay + alarm suppression"
+  rule_ids: [R001, R009, R005]
+  severity: critical
+  mitre: { tactic: TA0008, technique: T0815 }
+  real_world: "Stuxnet"
+  nis2_article: "Article 23"

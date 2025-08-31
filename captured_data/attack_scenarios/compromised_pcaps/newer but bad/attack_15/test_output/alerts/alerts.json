@@ -1,0 +1,28 @@
+[
+  {
+    "rule_id": "R005",
+    "description": "Role violation: Unauthorized IP 10.10.20.100 wrote register 1024",
+    "severity": "medium",
+    "src": "10.10.20.100",
+    "dst": "10.10.10.10",
+    "function_code": 6,
+    "address": 1024,
+    "timestamp": 1755430484.346985,
+    "uid": "CjIiJs2K6XuKpno1Ug",
+    "value": 500,
+    "tid": 258
+  },
+  {
+    "rule_id": "R005",
+    "description": "Role violation: Unauthorized IP 10.10.20.100 wrote register 1024",
+    "severity": "medium",
+    "src": "10.10.20.100",
+    "dst": "10.10.10.10",
+    "function_code": 6,
+    "address": 1024,
+    "timestamp": 1755430579.217013,
+    "uid": "CjIiJs2K6XuKpno1Ug",
+    "value": 500,
+    "tid": 463
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "rule_id": "R014",
+    "description": "Communication from unauthorized IP: 10.10.10.100",
+    "severity": "critical",
+    "src": "10.10.10.100",
+    "dst": "10.10.10.10",
+    "function_code": 6,
+    "address": 1024,
+    "timestamp": 1755357505.415342,
+    "uid": "CbTfJJ3iwkL64uPwab",
+    "value": 500,
+    "tid": 14476
+  },
+  {
+    "rule_id": "R014",
+    "description": "Communication from unauthorized IP: 10.10.10.100",
+    "severity": "critical",
+    "src": "10.10.10.100",
+    "dst": "10.10.10.10",
+    "function_code": 6,
+    "address": 1024,
+    "timestamp": 1755357505.436029,
+    "uid": "CbTfJJ3iwkL64uPwab",
+    "value": 500,
+    "tid": 14476
+  }
+]

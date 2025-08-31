@@ -1,0 +1,12 @@
+[
+  {
+    "rule_id": "R016",
+    "description": "Polling rhythm broken: 0.382s interval",
+    "severity": "medium",
+    "src": "10.10.20.30",
+    "dst": "10.10.10.10",
+    "function_code": 1,
+    "address": 800,
+    "timestamp": 1752501605.576712
+  }
+]

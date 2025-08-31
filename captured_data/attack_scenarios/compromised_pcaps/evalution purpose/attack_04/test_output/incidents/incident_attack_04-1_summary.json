@@ -1,0 +1,15 @@
+{
+  "summary": {
+    "total_incidents": 1,
+    "critical_incidents": 0,
+    "high_incidents": 0,
+    "severity_distribution": {
+      "medium": 1
+    },
+    "rule_distribution": {
+      "R013": 1
+    }
+  },
+  "critical_incidents": [],
+  "high_incidents": []
+}

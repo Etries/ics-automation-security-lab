@@ -1,0 +1,80 @@
+[
+  {
+    "rule_id": "R009",
+    "description": "Potential replay attack (TID 4242)",
+    "severity": "medium",
+    "src": "10.10.10.100",
+    "dst": "10.10.10.10",
+    "function_code": 4,
+    "address": 100,
+    "timestamp": 1755263001.101298,
+    "uid": "Ca3OsvbhxammTaM77",
+    "value": 0,
+    "tid": 4242
+  },
+  {
+    "rule_id": "R009",
+    "description": "Potential replay attack (TID 4242)",
+    "severity": "medium",
+    "src": "10.10.10.100",
+    "dst": "10.10.10.10",
+    "function_code": 4,
+    "address": 100,
+    "timestamp": 1755263005.537814,
+    "uid": "CZgd1D4vi1bjxnKUMg",
+    "value": 0,
+    "tid": 4242
+  },
+  {
+    "rule_id": "R015",
+    "description": "Undefined state transition: 500 -> 400",
+    "severity": "high",
+    "src": "10.10.20.30",
+    "dst": "10.10.10.10",
+    "function_code": 6,
+    "address": 1024,
+    "timestamp": 1755263011.408561,
+    "uid": "CuSdns3Lo0IE3JC31c",
+    "value": 400,
+    "tid": 407
+  },
+  {
+    "rule_id": "R015",
+    "description": "State transition context/timing violation: 400 -> 500 in 2.22s",
+    "severity": "high",
+    "src": "10.10.20.30",
+    "dst": "10.10.10.10",
+    "function_code": 6,
+    "address": 1024,
+    "timestamp": 1755263013.624998,
+    "uid": "CuSdns3Lo0IE3JC31c",
+    "value": 500,
+    "tid": 421
+  },
+  {
+    "rule_id": "R009",
+    "description": "Potential replay attack (TID 4242)",
+    "severity": "medium",
+    "src": "10.10.10.100",
+    "dst": "10.10.10.10",
+    "function_code": 4,
+    "address": 100,
+    "timestamp": 1755263018.336192,
+    "uid": "C4boxZ3BY0xHV2B1u1",
+    "value": 0,
+    "tid": 4242
+  },
+  {
+    "rule_id": "R009",
+    "description": "Potential replay attack (TID 4242)",
+    "severity": "medium",
+    "src": "10.10.10.100",
+    "dst": "10.10.10.10",
+    "function_code": 4,
+    "address": 100,
+    "timestamp": 1755263023.673929,
+    "uid": "CI7Xzp42Ak5q3swz6",
+    "value": 0,
+    "tid": 4242
+  }
+]

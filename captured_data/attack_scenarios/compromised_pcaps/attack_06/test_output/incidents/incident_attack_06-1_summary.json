@@ -1,0 +1,72 @@
+{
+  "summary": {
+    "total_incidents": 2,
+    "critical_incidents": 0,
+    "high_incidents": 1,
+    "severity_distribution": {
+      "medium": 1,
+      "high": 1
+    },
+    "rule_distribution": {
+      "R016": 1,
+      "R006": 1
+    }
+  },
+  "critical_incidents": [],
+  "high_incidents": [
+    {
+      "incident_id": "INC-20250816-93d71aac519ddb36",
+      "start_time": "2025-08-15T13:15:17.723003+00:00",
+      "end_time": "2025-08-15T13:15:17.723003+00:00",
+      "duration_seconds": 0.0,
+      "severity": "high",
+      "alert_count": 1,
+      "summary": "1 correlated alerts; rules: R006.",
+      "affected_assets": [
+        "PLC1 \u2013 OpenPLC Runtime"
+      ],
+      "source_assets": [
+        "unknown_asset"
+      ],
+      "triggered_rules": [
+        "R006"
+      ],
+      "source_ip": "10.10.10.100",
+      "destination_ip": "10.10.10.10",
+      "function_code": 16,
+      "register_address": 1024,
+      "register_value": 500,
+      "transaction_id": 13211,
+      "mitre_attack": {
+        "tactic_id": "TA0007",
+        "tactic_name": "Discovery/Collection",
+        "tactic_description": "Information gathering or protocol abuse",
+        "technique_id": "T0812",
+        "technique_name": "Unknown",
+        "technique_description": ""
+      },
+      "nis2_compliance": {
+        "article_id": "Article 23",
+        "article_name": "Incident Reporting",
+        "description": "Detection and reporting",
+        "requirements": [
+          "Incident detection",
+          "Reporting",
+          "Response coordination"
+        ]
+      },
+      "timeline": [
+        {
+          "timestamp": "2025-08-15T13:15:17.723003+00:00",
+          "rule_id": "R006",
+          "description": "Illegal Modbus function code used",
+          "source": "unknown_asset (10.10.10.100)",
+          "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+          "details": "Register: start_cmd (1024), Value: 500"
+        }
+      ],
+      "detection_method": "passive_network_analysis",
+      "status": "open"
+    }
+  ]
+}

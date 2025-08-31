@@ -1,0 +1,72 @@
+[
+  {
+    "incident_id": "INC-20250817-18db773a0ee9e71d",
+    "start_time": "2025-08-15T13:06:30.981905+00:00",
+    "end_time": "2025-08-15T13:06:37.530520+00:00",
+    "duration_seconds": 6.548615,
+    "severity": "medium",
+    "alert_count": 3,
+    "summary": "3 correlated alerts; rules: R009.",
+    "affected_assets": [
+      "PLC1 \u2013 OpenPLC Runtime"
+    ],
+    "source_assets": [
+      "unknown_asset"
+    ],
+    "triggered_rules": [
+      "R009"
+    ],
+    "source_ip": "10.10.10.100",
+    "destination_ip": "10.10.10.10",
+    "function_code": 4,
+    "register_address": 100,
+    "register_value": 0,
+    "transaction_id": 4242,
+    "mitre_attack": {
+      "tactic_id": "TA0008",
+      "tactic_name": "Lateral Movement",
+      "tactic_description": "Movement within network",
+      "technique_id": "T0815",
+      "technique_name": "Replay",
+      "technique_description": "Replay of captured communications"
+    },
+    "nis2_compliance": {
+      "article_id": "Article 23",
+      "article_name": "Incident Reporting",
+      "description": "Detection and reporting",
+      "requirements": [
+        "Incident detection",
+        "Reporting",
+        "Response coordination"
+      ]
+    },
+    "timeline": [
+      {
+        "timestamp": "2025-08-15T13:06:30.981905+00:00",
+        "rule_id": "R009",
+        "description": "Replay attack detected - same TID repeated",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:06:33.696537+00:00",
+        "rule_id": "R009",
+        "description": "Replay attack detected - same TID repeated",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      },
+      {
+        "timestamp": "2025-08-15T13:06:37.530520+00:00",
+        "rule_id": "R009",
+        "description": "Replay attack detected - same TID repeated",
+        "source": "unknown_asset (10.10.10.100)",
+        "target": "PLC1 \u2013 OpenPLC Runtime (10.10.10.10)",
+        "details": "Register: tank_level (100), Value: 0"
+      }
+    ],
+    "detection_method": "passive_network_analysis",
+    "status": "open"
+  }
+]
